@@ -40,6 +40,7 @@
 }
 
 .imgCarrusel {
+    border: 1px solid var(--negro);
     height: 20vw;
     width: 25vw;
 }
@@ -82,12 +83,12 @@
 .modal-content {
     border-radius: 0 !important;
     height: max-content !important;
-    width: 45vw !important;
+    width: 60vw !important;
     min-width: 45vw !important;
 }
 
 .textModalContainer{
-    padding: 1.5vw;
+    padding: 1vw;
     height: max-content;
 }
 
@@ -100,9 +101,9 @@
 }
 
 .modal-body {
-    padding: 3vw 2vw 3vw 2vw !important;
+    padding: 2vw !important;
 }
 
 .imgModal {
-    height: 15vw;
+    height: 20vw;
 }
