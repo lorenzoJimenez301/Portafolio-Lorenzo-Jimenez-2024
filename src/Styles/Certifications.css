@@ -1,0 +1,34 @@
+.certificationsContainer {
+    height: 100vh;
+}
+
+.certi1,
+.certi2 {
+    width: 50%;
+}
+
+.certiTitle {
+    color: var(--negro);
+    font-family: var(--mont);
+    font-weight: bold;
+    font-size: 6.5vw;
+    line-height: 6vw;
+    text-indent: -7.5px;
+}
+
+.certiSubTitle {
+    color: var(--grisPrincipal);
+    font-family: var(--lato);
+    font-weight: normal;
+    font-size: 3vw;
+    line-height: 1;
+    text-indent: -4px;
+}
+
+.Carrusel{
+    width: 100%;
+}
+
+.imgCarrusel{
+    height: 200px;
+}

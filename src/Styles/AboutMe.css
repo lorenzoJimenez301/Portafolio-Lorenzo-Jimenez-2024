@@ -1,0 +1,201 @@
+.superSkillsContainer {
+    height: 100vh;
+
+}
+
+.skills1 {
+    height: 100%;
+    width: 50%;
+}
+
+.skills1Container {
+    width: auto;
+    height: auto;
+    gap: 1vw;
+}
+
+.skillsTitle {
+    color: var(--negro);
+    font-family: var(--mont);
+    font-weight: bold;
+    font-size: 6.5vw;
+    line-height: 6vw;
+    text-indent: -7.5px;
+}
+
+.skills1SubTitle {
+    color: var(--grisPrincipal);
+    font-family: var(--lato);
+    font-weight: normal;
+    font-size: 3vw;
+    line-height: 1;
+    text-indent: -4px;
+}
+
+.skills1P {
+    color: var(--negro);
+    font-size: .9vw;
+    width: 38vw;
+    font-family: var(--mont);
+}
+
+.skills2 {
+    height: auto;
+    width: 50%;
+    padding: 0;
+}
+
+.skillsContainer {
+    color: var(--negro);
+    height: 35vw;
+    min-height: 35vw;
+    width: max-content;
+    min-width: 37vw;
+    font-family: var(--mont);
+    padding: 2vw;
+    border: 1px solid var(--negro);
+}
+
+.skillsContainerTitleContainer {
+    gap: 1vw
+}
+
+.btnControlSkills {
+    color: var(--negro);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--negro);
+    padding: 0 0 1vw 0;
+    font-size: 1.2vw;
+}
+
+.skillsDetailsContainer {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
+.skillsDetailsTitle {
+    gap: 1vw;
+    padding: 1vw 0 1vw 1.3vw;
+}
+
+.btnFrontBack {
+    color: var(--negro);
+    width: max-content;
+    background-color: transparent;
+    border: none;
+    font-size: 1vw;
+}
+
+.selected {
+    color: var(--rojoPrincipal);
+    font-weight: bold;
+    border-bottom: 3px solid var(--rojoPrincipal);
+}
+
+.isSelected {
+    color: var(--rojoPrincipal);
+    font-weight: bold;
+}
+
+.my-node-enter {
+    opacity: 0;
+}
+
+.my-node-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.my-node-exit {
+    opacity: 0;
+}
+
+.my-node-exit-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+@media (max-width: 992px) {
+    .superSkillsContainer {
+        height: 100%;
+        padding: 40vw 0;
+    }
+
+    .skills1 {
+        width: 100%;
+        padding: 5vw 6vw;
+    }
+
+    .skills1Container {
+        height: auto;
+        width: max-content;
+    }
+
+    .skillsTitle {
+        font-size: 15vw;
+        line-height: 14vw;
+    }
+
+    .skills1SubTitle {
+        font-size: 10vw;
+    }
+
+    .skills1P {
+        width: fit-content;
+        font-size: 3.5vw;
+        padding: 5vw 0 0 0;
+    }
+
+    .skills2 {
+        height: auto;
+        width: 100%;
+        padding: 5vw;
+    }
+
+    .skillsContainer {
+        height: auto;
+        width: 90vw;
+        padding: 5vw 0 0 0;
+    }
+    .skillsDetailsTitle{
+
+        text-align: center;
+        width: auto;
+    }
+    .btnControlSkills{
+        font-size: 4vw;
+    }
+    .btnFrontBack{
+        font-size: 3.5vw;
+    }
+    .skillsDetailsContainer{
+        padding: 0 5vw 10vw 5vw;
+
+    .btnControlSkills {
+        font-size: 4vw;
+    }
+
+    .btnFrontBack {
+        font-size: 3.5vw;
+    }
+
+    .skillsDetailsContainer {
+        height: auto;
+        width: 100%;
+        padding: 0 0 5vw 0;
+    }
+}
+
+@media (max-height: 500px) {
+    .superSkillsContainer {
+        height: 100%;
+        padding: 5vw;
+    }
+}
+}
