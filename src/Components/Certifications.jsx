@@ -100,7 +100,7 @@ export const Certifications = () => {
                 <Modal desc={'The freeCodeCamp Responsive Web Design certification is an educational program focused on teaching how to design and develop websites that adapt and are functional on different devices and screen sizes.'} provider={'freeCodeCamp'} img={cert1} title={'Responsive Web Design'} id={'ResponsiveWeb'} />
                 <Modal img={cert2} title={'Front End Developer'} id={'frontEndLibraries'} />
                 <Modal img={cert3} title={'Soft Skills'} id={'softSkills'} />
-                <Modal img={cert4} title={'High school'} id={'bachi'} />
+                <Modal provider={'LIMERE'} img={cert4} title={'High school'} id={'bachi'} />
             </article>
         </section>
     );
