@@ -25,7 +25,7 @@
     text-indent: -4px;
 }
 
-.titleCerti{
+.titleCerti {
     padding: 1.7vw;
     margin: 0;
     font-family: var(--mont);
@@ -35,7 +35,7 @@
 }
 
 .mySwiper {
-    height:auto;
+    height: auto;
     width: 25vw;
 }
 
@@ -71,19 +71,38 @@
     transition: transform .5s ease;
 }
 
-.swiper-slide{
+.swiper-slide {
     background-color: var(--piel);
 }
 
-.modal{
+.modal {
     backdrop-filter: blur(10px);
 }
-.modal-content{
+
+.modal-content {
+    border-radius: 0 !important;
+    height: max-content !important;
     width: 45vw !important;
+    min-width: 45vw !important;
 }
-.modal-dialog{
-    max-width: 100%;
+
+.textModalContainer{
+    padding: 1.5vw;
+    height: max-content;
 }
-.imgModal{
-    height: 80%;
+
+.modal-dialog {
+    max-width: 100% !important;
+}
+
+.modal-header{
+    padding: 1vw !important;
+}
+
+.modal-body {
+    padding: 3vw 2vw 3vw 2vw !important;
+}
+
+.imgModal {
+    height: 15vw;
 }

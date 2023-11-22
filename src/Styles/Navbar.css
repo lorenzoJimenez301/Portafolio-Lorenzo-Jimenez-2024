@@ -119,3 +119,9 @@
         font-size: 5vw;
     }
 }
+
+@media (max-height:500px) {
+    .navBar{
+        position: relative !important;
+    }
+}

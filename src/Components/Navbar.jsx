@@ -70,7 +70,7 @@ export const Navbar = ({ onImagenCambiada }) => {
     };
 
     return (
-        <nav className={`navBar position-${isMobile ? 'absolute' : 'relative'}  navbar navbar-expand-lg m-0 pb-2 pt-2`}>
+        <nav className={`navBar position-${isMobile ? 'absolute' : 'relative'} navbar navbar-expand-lg m-0 pb-2 pt-2`}>
             <div style={{ backgroundColor: 'transparent' }} className='navBar2 container-fluid d-flex flex-row-reverse flex-lg-row justify-content-between align-items-center px-0'>
                 <a href='/'><img src={foto} className='logoPrincipal me-0 ' alt='logo' /></a>
                 <CSSTransition

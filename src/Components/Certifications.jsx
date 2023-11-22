@@ -11,6 +11,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { RxCross1 } from "react-icons/rx";
+
 
 const MySlider = () => {
     return (
@@ -56,23 +58,23 @@ const Modal = ({ id, title, img, provider, desc }) => {
     return (
         <div className='modal fade' id={`${id}`} data-bs-backdrop='static' data-bs-keyboard='false' aria-labelledby='staticBackdropLabel' aria-hidden='true'>
             <div className='modal-dialog modal-dialog-centered p-0 m-0'>
-                <div style={{fontFamily: 'var(--mont)'}} className='modal-content m-auto'>
+                <div style={{ fontFamily: 'var(--mont)' }} className='modal-content m-auto'>
                     <div className='modal-header'>
-                        <h2 className='p-0 m-0' style={{fontFamily: 'var(--mont)', fontWeight: 'bold'}} >{title}</h2>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h2 className='p-0 m-0' style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '2vw' }} >{title}</h2>
+                        <RxCross1 style={{color: '#000', fontSize: '1.7vw'}} type="button" className="btnclose" data-bs-dismiss="modal" aria-label="Close" />
                     </div>
-                    <div className='d-flex flex-row px-2 pt-3 pb-3'>
+                    <div className='d-flex flex-row align-items-center modal-body'>
                         <div className='w-50 d-flex justify-content-center align-items-center'>
                             <img className='imgModal' src={img} alt="imgModal" />
                         </div>
-                        <div className='text-center w-50 d-flex flex-column justify-content-center align-items-center p-5'>
-                            <div style={{gap: '.8vw'}} className='d-flex flex-row align-items-center'>
-                                <h3 style={{fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '1.2vw'}} className='p-0 m-0'>Provider:</h3>
-                                <p style={{fontFamily: 'var(--mont)', fontSize: '.9vw'}} className='p-0 pt-0 m-0 textCerti'>{provider}</p>
+                        <div className='textModalContainer text-center w-50 d-flex flex-column justify-content-center align-items-center'>
+                            <div style={{ gap: '.8vw' }} className='d-flex flex-row align-items-center'>
+                                <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '1.2vw' }} className='p-0 m-0'>Provider:</h3>
+                                <p style={{ fontFamily: 'var(--mont)', fontSize: '.9vw' }} className='p-0 pt-0 m-0 textCerti'>{provider}</p>
                             </div>
-                            <div className='d-flex flex-column align-items-center mt-5'>
-                                <h3 style={{fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '1.2vw'}} className='p-0 m-0'>Description:</h3>
-                                <p style={{fontFamily: 'var(--mont)', fontSize: '.7vw'}} className='p-0 m-0'>{desc}</p>
+                            <div style={{marginTop: '2vw', padding: '0 2vw 0 2vw'}} className='d-flex flex-column align-items-center'>
+                                <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '1.2vw' }} className='p-0 m-0'>Description:</h3>
+                                <p style={{ fontFamily: 'var(--mont)', fontSize: '.7vw', marginTop: '1vw'}} className='p-0'>{desc}</p>
                             </div>
                         </div>
                     </div>
@@ -95,7 +97,7 @@ export const Certifications = () => {
                 <BsChevronLeft className="custom-prev-button btnNavigation me-2 me-lg-5" />
                 <MySlider />
                 <BsChevronRight className="custom-next-button btnNavigation ms-2 ms-lg-5" />
-                <Modal desc={'La certificación de Responsive Web Design de freeCodeCamp es un programa educativo enfocado en enseñar a diseñar y desarrollar sitios web que se adapten y sean funcionales en diferentes dispositivos y tamaños de pantalla.'} provider={'freeCodeCamp'} img={cert1} title={'Responsive Web Design'} id={'ResponsiveWeb'} />
+                <Modal desc={'The freeCodeCamp Responsive Web Design certification is an educational program focused on teaching how to design and develop websites that adapt and are functional on different devices and screen sizes.'} provider={'freeCodeCamp'} img={cert1} title={'Responsive Web Design'} id={'ResponsiveWeb'} />
                 <Modal img={cert2} title={'Front End Developer'} id={'frontEndLibraries'} />
                 <Modal img={cert3} title={'Soft Skills'} id={'softSkills'} />
                 <Modal img={cert4} title={'High school'} id={'bachi'} />
