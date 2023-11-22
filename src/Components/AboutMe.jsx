@@ -20,8 +20,8 @@ export const AboutMe = ({ changeMode }) => {
 
     return (
         <section className='superSkillsContainer d-flex flex-column flex-lg-row align-items-center'>
-            <article className='skills1 d-flex justify-content-center align-items-center bg-danger'>
-                <div className='skills1Container d-flex flex-column'>
+            <article className='skills1 d-flex justify-content-center align-items-center'>
+                <div className='skills1Container d-flex flex-column '>
                     <h2 className='skillsTitle p-0 m-0'>Experience</h2>
                     <h3 className='skills1SubTitle p-0 m-0'>and Skills</h3>
                     <p className='m-0 skills1P'>
