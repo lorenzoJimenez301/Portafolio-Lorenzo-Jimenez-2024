@@ -47,8 +47,8 @@
 
 .skillsContainer {
     color: var(--negro);
-    height: 35vw;
-    min-height: 35vw;
+    height: 34vw;
+    min-height: 34vw;
     width: max-content;
     min-width: 37vw;
     font-family: var(--mont);

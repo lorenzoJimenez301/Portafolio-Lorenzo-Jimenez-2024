@@ -7,7 +7,7 @@ import cLogo from '../Images/LogoTecno/3.png';
 
 export const GraphicDesign = () => {
   const progressBarData = [
-    { logo: psLogo, color: '#00aeff', porcent: 50 },
+    { logo: psLogo, color: '#00aeff', porcent: 30 },
     { logo: fgLogo, color: '#f14e1c', porcent: 70 },
     { logo: cLogo, color: '#4c49ee', porcent: 90 },
   ];

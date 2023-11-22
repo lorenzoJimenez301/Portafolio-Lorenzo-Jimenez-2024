@@ -51,7 +51,7 @@ export const Navbar = ({ onImagenCambiada }) => {
             setFoto(LogoBlanco);
             root.style.setProperty('--piel', grisPrincipal);
             root.style.setProperty('--negro', '#ffffff');
-            root.style.setProperty('--grisPrincipal', '#ffffff');
+            root.style.setProperty('--grisPrincipal', pielPrincipal);
             onImagenCambiada(srcImagen1);
         } else {
             setFoto(Logo)

@@ -25,11 +25,65 @@
     text-indent: -4px;
 }
 
-.Carrusel{
-    width: 100%;
+.titleCerti{
+    padding: 1.7vw;
+    margin: 0;
+    font-family: var(--mont);
+    font-weight: bold;
+    font-size: 1.7vw;
+    color: var(--negro);
 }
 
-.imgCarrusel{
-    height: 30vw;
-    width: 35vw;
+.mySwiper {
+    height:auto;
+    width: 25vw;
+}
+
+.imgCarrusel {
+    height: 20vw;
+    width: 25vw;
+}
+
+.btnNavigation {
+    cursor: pointer;
+    font-size: 5vw;
+    color: var(--negro);
+    margin: 0 0 5.5vw 0;
+}
+
+.btnMore {
+    text-align: center;
+    width: 6vw;
+    height: 2vw;
+    background-color: var(--rojoPrincipal);
+    border: none;
+    color: var(--blanco);
+    font-family: var(--lato);
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    transition: transform .5s ease;
+}
+
+.btnMore:hover {
+    transform: scale(1.2);
+    transition: transform .5s ease;
+}
+
+.swiper-slide{
+    background-color: var(--piel);
+}
+
+.modal{
+    backdrop-filter: blur(10px);
+}
+.modal-content{
+    width: 45vw !important;
+}
+.modal-dialog{
+    max-width: 100%;
+}
+.imgModal{
+    height: 80%;
 }
