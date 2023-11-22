@@ -34,7 +34,7 @@
 
 .navItem {
     font-family: var(--mont);
-    font-size: 1vw;
+    font-size: .9vw;
     font-style: normal;
     font-weight: 400;
     min-width: max-content;

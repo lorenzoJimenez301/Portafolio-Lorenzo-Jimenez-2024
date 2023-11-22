@@ -1,7 +1,11 @@
 import React from 'react';
 import '../Styles/Certifications.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import cert1 from '../Images/Certifications/Cert1.png';
+import cert2 from '../Images/Certifications/Cert2.png';
+import cert3 from '../Images/Certifications/Cert3.png';
+import cert4 from '../Images/Certifications/Cert4.png';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -12,23 +16,25 @@ const MySlider = () => {
         <Swiper
             spaceBetween={30}
             effect={'fade'}
-            modules={[EffectFade, Navigation, Pagination]}
+            modules={[EffectFade, Navigation, Pagination, Autoplay]}
+            loop={true}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
             className="mySwiper text-center"
         >
             <SwiperSlide>
-                <img className='imgCarrusel' src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                <img className='imgCarrusel' src={cert1} />
             </SwiperSlide>
             <SwiperSlide>
-                <img className='imgCarrusel' src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img className='imgCarrusel' src={cert2} />
             </SwiperSlide>
             <SwiperSlide>
-                <img className='imgCarrusel' src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                <img className='imgCarrusel' src={cert3} />
             </SwiperSlide>
             <SwiperSlide>
-                <img className='imgCarrusel' src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-                <img className='imgCarrusel' src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                <img className='imgCarrusel' src={cert4} />
             </SwiperSlide>
         </Swiper>
     );
