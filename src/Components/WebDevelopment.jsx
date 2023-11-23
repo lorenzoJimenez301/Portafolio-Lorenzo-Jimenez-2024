@@ -18,10 +18,11 @@ export const ProgressBar = ({ logo, color, porcent }) => {
             <div className="progress mx-auto" role="progressbar" aria-label="Basic example" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                 <div style={{ backgroundColor: color, width: `${porcent}%`, transition: 'width 2s ease' }} className={`progress-bar`}></div>
             </div>
-            <p className='ms-3 m-0 p-0 pBar' style={{
+            <p className='p-0 pBar' style={{
                 fontFamily: 'var(--mont)',
                 fontWeight: 'bold',
                 color: 'var(--negro)',
+                margin: '0 0 0 1vw',
             }}>{porcent}%</p>
         </li>
     );

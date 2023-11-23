@@ -1,5 +1,5 @@
 .navBar {
-    width: 100%;
+    width: 100vw;
     height: max-content;
     z-index: 100;
     background-color: var(--piel);
@@ -15,7 +15,7 @@
 }
 
 .listContainer {
-    width: auto;
+    width: 100VW;
 }
 
 
@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     gap: 3vw;
+    padding: 0 2vw 0 0;
 }
 
 .navItemContainer {

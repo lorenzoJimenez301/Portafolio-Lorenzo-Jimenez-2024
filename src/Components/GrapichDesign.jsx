@@ -13,7 +13,7 @@ export const GraphicDesign = () => {
   ];
 
   return (
-    <ul className='listSkills p-0 m-0 d-flex flex-column justify-content-center align-items-center pt-4 pb-4 pt-lg-0 pb-lg-0'>
+    <ul className='listSkills p-0 m-0 d-flex flex-column justify-content-center align-items-center pt-5 pb-4 mt-lg-5 pt-lg-2 pb-lg-0'>
       {progressBarData.map((data, index) => (
         <ProgressBar key={index} {...data} />
       ))}
