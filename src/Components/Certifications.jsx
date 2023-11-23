@@ -86,14 +86,14 @@ const Modal = ({ id, title, img, provider, desc }) => {
 
 export const Certifications = () => {
     return (
-        <section className='certificationsContainer d-flex flex-column flex-lg-row'>
-            <article className='certi1 d-flex justify-content-center align-items-center'>
+        <section className='certificationsContainer d-flex flex-column justify-content-center align-items-center flex-lg-row'>
+            <article className='certi1 d-flex justify-content-center align-items-center bg-danger'>
                 <div className='cert1TitleContainer'>
                     <h2 className='certiTitle'>Certifications</h2>
                     <h3 className='certiSubTitle'>and Degrees</h3>
                 </div>
             </article>
-            <article className='certi2 d-flex justify-content-center align-items-center'>
+            <article className='certi2 d-flex justify-content-center align-items-center bg-info'>
                 <BsChevronLeft className="custom-prev-button btnNavigation me-2 me-lg-5" />
                 <MySlider />
                 <BsChevronRight className="custom-next-button btnNavigation ms-2 ms-lg-5" />

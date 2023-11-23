@@ -161,10 +161,11 @@
     .skillsContainer {
         height: auto;
         width: 90vw;
-        padding: 5vw 0 0 0;
+        padding: 7vw 0 0 0;
     }
     .skillsDetailsTitle{
-
+        padding: 4vw 0 4vw 0;
+        gap: 3vw;
         text-align: center;
         width: auto;
     }
