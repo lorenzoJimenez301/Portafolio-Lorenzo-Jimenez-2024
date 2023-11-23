@@ -1,10 +1,10 @@
 .certificationsContainer {
-    height: 100vh;
+    height: 50vw;
 }
 
 .certi1,
 .certi2 {
-    width: 50%;
+    width: 50vw;
 }
 
 .certiTitle {
@@ -13,7 +13,8 @@
     font-weight: bold;
     font-size: 6.5vw;
     line-height: 6vw;
-    text-indent: -7.5px;
+    text-indent: 0;
+    letter-spacing: -0.1vw;
 }
 
 .certiSubTitle {
@@ -21,8 +22,8 @@
     font-family: var(--lato);
     font-weight: normal;
     font-size: 3vw;
-    line-height: 1;
-    text-indent: -4px;
+    line-height: 3vw;
+    text-indent: 0;
 }
 
 .titleCerti {
@@ -34,9 +35,9 @@
     color: var(--negro);
 }
 
-.mySwiper {
-    height: auto;
+.carrusel {
     width: 25vw;
+    min-width: 25vw;
 }
 
 .imgCarrusel {
@@ -49,7 +50,7 @@
     cursor: pointer;
     font-size: 5vw;
     color: var(--negro);
-    margin: 0 0 5.5vw 0;
+    margin: 0vw 3vw 5.5vw;
 }
 
 .btnMore {
@@ -62,7 +63,6 @@
     font-family: var(--lato);
     font-size: 1vw;
     font-weight: 700;
-    margin: 0;
     padding: 0;
     transition: transform .5s ease;
 }
@@ -72,12 +72,13 @@
     transition: transform .5s ease;
 }
 
-.swiper-slide {
-    background-color: var(--piel);
+.textModalContainer {
+    padding: 1vw;
+    height: max-content;
 }
 
 .modal {
-    backdrop-filter: blur(10px);
+    transform: translate3d(0, 0, 0) !important;
 }
 
 .modal-content {
@@ -85,11 +86,6 @@
     height: max-content !important;
     width: 60vw !important;
     min-width: 45vw !important;
-}
-
-.textModalContainer {
-    padding: 1vw;
-    height: max-content;
 }
 
 .modal-dialog {
@@ -117,7 +113,7 @@
     .certiSubTitle {
         font-size: 8vw;
         line-height: 1;
-        text-indent: -4px;
+        text-indent: 0;
         margin: 0;
     }
 
@@ -128,24 +124,41 @@
     }
 
     .certi1 {
-        padding: 5vw;
+        padding: 5vw 6vw;
         width: 100%;
     }
 
     .certi2 {
+        padding: 10vw 0;
         width: 100%;
     }
+
     .imgCarrusel {
-        height: 60vw;
-        width: 70vw;
+        height: 85vw;
+        width: 85vw;
     }
-    .mySwiper {
-        width: 70vw;
+
+    .carrusel {
+        width: 100vw;
     }
+
+
     .titleCerti {
-        font-size: 5vw;
+        display: none;
     }
+
+    .btnMore {
+        font-size: 5vw;
+        width: 85vw;
+        height: auto;
+        padding: 2vw;
+        border: .2vw solid var(--negro);
+    }
+
     .btnNavigation {
+        display: none;
+        padding: 0;
+        margin: 0;
         cursor: pointer;
         font-size: 13vw;
     }
