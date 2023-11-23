@@ -87,7 +87,7 @@
     min-width: 45vw !important;
 }
 
-.textModalContainer{
+.textModalContainer {
     padding: 1vw;
     height: max-content;
 }
@@ -96,7 +96,7 @@
     max-width: 100% !important;
 }
 
-.modal-header{
+.modal-header {
     padding: 1vw !important;
 }
 
@@ -106,4 +106,47 @@
 
 .imgModal {
     height: 20vw;
+}
+
+@media (max-width: 992px) {
+    .certificationsContainer {
+        height: 100%;
+        padding: 40vw 0;
+    }
+
+    .certiSubTitle {
+        font-size: 8vw;
+        line-height: 1;
+        text-indent: -4px;
+        margin: 0;
+    }
+
+    .certiTitle {
+        font-size: 13vw;
+        margin: 0;
+        line-height: 12vw;
+    }
+
+    .certi1 {
+        padding: 5vw;
+        width: 100%;
+    }
+
+    .certi2 {
+        width: 100%;
+    }
+    .imgCarrusel {
+        height: 60vw;
+        width: 70vw;
+    }
+    .mySwiper {
+        width: 70vw;
+    }
+    .titleCerti {
+        font-size: 5vw;
+    }
+    .btnNavigation {
+        cursor: pointer;
+        font-size: 13vw;
+    }
 }

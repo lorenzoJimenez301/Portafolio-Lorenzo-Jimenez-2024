@@ -36,7 +36,7 @@ export const AboutMe = ({ changeMode }) => {
                         <button className={`btnControlSkills ${!isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(false)}>Web Development</button>
                     </div>
                     {!isGraphicDesign &&
-                        <div className='skillsDetailsTitle d-flex justify-content-start align-items-center'>
+                        <div className='skillsDetailsTitle d-flex justify-content-center justify-content-start align-items-center'>
                             <button onClick={() => changeSection(true)} className={`btnFrontBack p-0 m-0 ${isFrontEnd ? 'isSelected' : ''}`}>Front-End</button>
                             <button onClick={() => changeSection(false)} className={`btnFrontBack p-0 m-0 ${!isFrontEnd ? 'isSelected' : ''}`}>Back-End</button>
                         </div>
