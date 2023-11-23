@@ -1,22 +1,27 @@
 import React from 'react';
 import { ProgressBar } from './WebDevelopment';
+import { useState, useEffect } from 'react';
 import '../Styles/WebDevelopment.css';
 import psLogo from '../Images/LogoTecno/1.png';
 import fgLogo from '../Images/LogoTecno/2.png';
 import cLogo from '../Images/LogoTecno/3.png';
 
 export const GraphicDesign = () => {
-  const progressBarData = [
-    { logo: psLogo, color: '#00aeff', porcent: 30 },
-    { logo: fgLogo, color: '#f14e1c', porcent: 70 },
-    { logo: cLogo, color: '#4c49ee', porcent: 90 },
-  ];
+  const [ancho1, setAncho1] = useState(0);
+  const [ancho2, setAncho2] = useState(0);
+  const [ancho3, setAncho3] = useState(0);
+
+  useEffect(() => {
+      setAncho1(90);
+      setAncho2(90);
+      setAncho3(70);
+  }, []);
 
   return (
-    <ul className='listSkills p-0 m-0 d-flex flex-column justify-content-center align-items-center pt-5 pb-4 mt-lg-5 pt-lg-2 pb-lg-0'>
-      {progressBarData.map((data, index) => (
-        <ProgressBar key={index} {...data} />
-      ))}
+    <ul style={{ marginTop: '7vw', padding: '0 0 0 2vw' }} className='listSkills listSkillsGraphic d-flex flex-column justify-content-center align-items-center '>
+      <ProgressBar logo={psLogo} color={'#00acfe'} porcent={ancho1} />
+      <ProgressBar logo={fgLogo} color={'#f04d1b'} porcent={ancho2} />
+      <ProgressBar logo={cLogo} color={'#533cf3'} porcent={ancho3} />
     </ul>
   );
 };

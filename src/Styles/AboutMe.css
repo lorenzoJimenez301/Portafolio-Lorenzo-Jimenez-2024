@@ -63,7 +63,7 @@
     color: var(--negro);
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid var(--negro);
+    border-bottom: .1vw solid var(--negro);
     padding: 0 0 1vw 0;
     font-size: 1.2vw;
 }
@@ -78,7 +78,7 @@
 
 .skillsDetailsTitle {
     gap: 1vw;
-    padding: 1.5vw 0 1.5vw 1.3vw;
+    padding: 2vw 0 1.5vw 1.3vw;
 }
 
 .btnFrontBack {
@@ -92,7 +92,7 @@
 .selected {
     color: var(--rojoPrincipal);
     font-weight: bold;
-    border-bottom: 3px solid var(--rojoPrincipal);
+    border-bottom: .3vw solid var(--rojoPrincipal);
 }
 
 .isSelected {
@@ -136,11 +136,12 @@
 
     .skillsTitle {
         font-size: 15vw;
-        line-height: 14vw;
+        line-height: 20vw;
     }
 
     .skills1SubTitle {
         font-size: 10vw;
+        line-height: 8vw;
     }
 
     .skills1P {
@@ -155,25 +156,22 @@
         padding: 5vw;
     }
 
+    .selected {
+        border-bottom: .9vw solid var(--rojoPrincipal);
+    }
+
     .skillsContainer {
         height: auto;
-        width: max-content;
+        width: 100vw;
         padding: 7vw 0 0 0;
     }
-    .skillsDetailsTitle{
-        padding: 4vw 0 4vw 0;
+
+    .skillsDetailsTitle {
+        padding: 7vw 0 10vw 0;
         gap: 3vw;
         text-align: center;
         width: auto;
     }
-    .btnControlSkills{
-        font-size: 4vw;
-    }
-    .btnFrontBack{
-        font-size: 3.5vw;
-    }
-    .skillsDetailsContainer{
-        padding: 0 5vw 10vw 5vw;
 
     .btnControlSkills {
         font-size: 4vw;
@@ -184,13 +182,25 @@
     }
 
     .skillsDetailsContainer {
-        height: auto;
-        width: 100%;
-        padding: 0 0 5vw 0;
+        padding: 0 5vw 10vw 5vw;
+
+        .btnControlSkills {
+            font-size: 4vw;
+        }
+
+        .btnFrontBack {
+            font-size: 3.5vw;
+        }
+
+        .skillsDetailsContainer {
+            height: auto;
+            width: 100%;
+            padding: 0 0 5vw 0;
+        }
     }
-}
 
 }
+
 /* @media (max-height: 700px) {
     .superSkillsContainer {
         height: 100%;

@@ -79,11 +79,11 @@ export const Navbar = ({ onImagenCambiada }) => {
                     nodeRef={tuRef}
                 >
                     <div ref={tuRef}>
-                        {!activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none ms-2' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none ms-2' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' />}
+                        {!activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' />}
                     </div>
                 </CSSTransition>
                 <div className='collapse navbar-collapse d-lg-flex justify-content-center justify-content-lg-end align-items-center' id='navbarNavDropdown'>
-                    <ul className='navbar-nav navList d-flex align-items-center justify-content-evenly'>
+                    <ul className={`${isOn ? 'h-0' : 'vh-100'} navbar-nav navList d-flex align-items-center justify-content-evenly`}>
                         <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} to={'/'}>Menu</Link></li>
                         <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} to={'/AboutMe'}>About Me</Link></li>
                         <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} to={'/Certifications'}>Certifications</Link></li>

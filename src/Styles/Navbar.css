@@ -35,7 +35,7 @@
 
 .navItem {
     font-family: var(--mont);
-    font-size: .9vw;
+    font-size: 1vw;
     font-style: normal;
     font-weight: 400;
     min-width: max-content;
@@ -107,17 +107,22 @@
 
     .logoPrincipal {
         height: 15vw;
+        margin: 1vw;
     }
 
     #hambur {
-        font-size: 10vw;
-        height: 60px;
+        font-size: 15vw;
+        height: 10vw;
         color: var(--negro);
         cursor: pointer;
+        margin: 1vw;
     }
 
     .navItem {
         font-size: 5vw;
+    }
+    .navItem:active{
+        color: var(--rojoPrincipal);
     }
 }
 

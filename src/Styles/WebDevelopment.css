@@ -1,51 +1,58 @@
-.listSkills{
+.listSkills {
     height: 100%;
     width: 100%;
     gap: 2vw;
 }
-.progress{
-    height: 1vw !important;
+
+.progress {
     width: 25vw;
     border-radius: 50px !important;
-    
+
 }
-.progress-bar{
+
+.progress-bar {
     font-family: var(--mont);
     color: var(--negro);
 }
+
 .progressBarImg {
     height: 3vw;
     padding: 0 .7vw 0 0;
 }
-.pBar{
+
+.pBar {
     font-size: .8vw;
 }
 
 @media (max-width: 992px) {
-    .listSkills{
+    .listSkills {
         width: 100%;
         height: 100%;
-        gap: .5vw;
+        gap: 10vw;
     }
-    .listSkills > li{
-        gap: 1vw;
+
+    .listSkills>li {
+        gap: 2vw;
     }
-    .progressBarImg{
+
+    .progressBarImg {
         height: 13vw;
     }
-    .progress{
+
+    .progress {
         height: 4vw !important;
         width: 50vw;
         border-radius: 50px !important;
     }
-    .pBar{
+    .progress-bar {
+        height: 4vw !important;
+    }
+
+    .pBar {
         font-size: 4vw;
     }
-    .listSkills{
-        gap: 8vw;
 
-    }
-    .pBar{
+    .pBar {
         font-size: 4vw;
     }
 }
