@@ -35,8 +35,8 @@
     font-weight: bold;
     font-size: 7vw;
     line-height: 5vw;
-    text-indent: -7.5px;
-    letter-spacing: -6px;
+    text-indent: 0;
+    letter-spacing: -.2 vw;
 }
 
 .subTitle {
@@ -44,8 +44,8 @@
     font-family: var(--lato);
     font-weight: normal;
     font-size: 3.2vw;
-    line-height: 1;
-    text-indent: -3px;
+    line-height: 1.5vw;
+    text-indent: 0;
 }
 
 .Lorenzo {
@@ -150,6 +150,7 @@
     }
 
     .subTitle {
+        line-height: 7vw;
         font-size: 6vw;
     }
 
@@ -162,7 +163,7 @@
         width: 100px;
         min-width: max-content;
         height: auto;
-        padding: 5px 5px;
+        padding: 2vw 2vw;
     }
 
     .inter {

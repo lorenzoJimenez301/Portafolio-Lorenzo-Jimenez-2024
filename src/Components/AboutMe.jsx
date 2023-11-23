@@ -5,7 +5,7 @@ import { GraphicDesign } from '../Components/GrapichDesign';
 import { CSSTransition } from 'react-transition-group';
 
 export const AboutMe = ({ changeMode }) => {
-    const [isGraphicDesign, setIsGraphicDesign] = useState(true);
+    const [isGraphicDesign, setIsGraphicDesign] = useState(false);
     const [isFrontEnd, setIsFrontEnd] = useState(true);
     const transitionRef = useRef(null);
 
@@ -31,12 +31,12 @@ export const AboutMe = ({ changeMode }) => {
             </article>
             <article className='skills2 d-flex justify-content-center align-items-center'>
                 <div className='skillsContainer'>
-                    <div className='skillsContainerTitleContainer d-flex justify-content-evenly align-items-center pb-3'>
+                    <div className='skillsContainerTitleContainer d-flex justify-content-evenly align-items-center'>
                         <button className={`btnControlSkills ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Graphic Design</button>
                         <button className={`btnControlSkills ${!isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(false)}>Web Development</button>
                     </div>
                     {!isGraphicDesign &&
-                        <div className='skillsDetailsTitle d-flex justify-content-center justify-content-start align-items-center'>
+                        <div className='skillsDetailsTitle d-flex justify-content-center justify-content-lg-start align-items-center'>
                             <button onClick={() => changeSection(true)} className={`btnFrontBack p-0 m-0 ${isFrontEnd ? 'isSelected' : ''}`}>Front-End</button>
                             <button onClick={() => changeSection(false)} className={`btnFrontBack p-0 m-0 ${!isFrontEnd ? 'isSelected' : ''}`}>Back-End</button>
                         </div>
