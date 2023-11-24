@@ -16,9 +16,6 @@ import { useMediaQuery } from 'react-responsive';
 
 
 const MySlider = () => {
-
-    const isMobile = useMediaQuery({maxWidth: 992})
-
     return (
         <Swiper
             spaceBetween={30}
@@ -56,26 +53,29 @@ const MySlider = () => {
 };
 
 const Modal = ({ id, title, img, provider, desc }) => {
+
+    const isMobile = useMediaQuery({maxWidth: 992});
+
     return (
         <div className='modal fade' id={`${id}`} data-bs-backdrop='static' data-bs-keyboard='false' aria-labelledby='staticBackdropLabel' aria-hidden='true'>
             <div className='modal-dialog modal-dialog-centered p-0 m-0'>
                 <div style={{ fontFamily: 'var(--mont)' }} className='modal-content m-auto'>
                     <div className='modal-header'>
-                        <h2 className='p-0 m-0' style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '2vw' }} >{title}</h2>
-                        <RxCross1 style={{ color: '#000', fontSize: '1.7vw' }} type="button" className="btnclose" data-bs-dismiss="modal" aria-label="Close" />
+                        <h2 className='p-0 m-0' style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '5vw' : '2vw'}` }} >{title}</h2>
+                        <RxCross1 style={{ color: '#000', fontSize: `${isMobile ? '6.5vw' : '1.7vw'}` }} type="button" className="btnclose" data-bs-dismiss="modal" aria-label="Close" />
                     </div>
-                    <div className='d-flex flex-row align-items-center modal-body'>
+                    <div className='d-flex flex-column flex-lg-row align-items-center modal-body'>
                         <div className='w-50 d-flex justify-content-center align-items-center'>
                             <img loading='lazy' className='imgModal' src={img} alt="imgModal" />
                         </div>
-                        <div className='textModalContainer text-center w-50 d-flex flex-column justify-content-center align-items-center'>
-                            <div style={{ gap: '.8vw' }} className='d-flex flex-row align-items-center'>
-                                <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '1.2vw' }} className='p-0 m-0'>Provider:</h3>
-                                <p style={{ fontFamily: 'var(--mont)', fontSize: '1vw' }} className='p-0 pt-0 m-0 textCerti'>{provider}</p>
+                        <div style={{width: `${isMobile ? '100' : '50'}`}} className='textModalContainer text-center d-flex flex-column justify-content-center align-items-center'>
+                            <div style={{ gap: '.8vw' , padding: `${isMobile ? '3vw' : ''}`}} className='d-flex flex-row align-items-center justify-content-center'>
+                                <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '5vw' : '1.2vw'}` }} className='p-0 m-0'>Provider:</h3>
+                                <p style={{ fontFamily: 'var(--mont)', fontSize: `${isMobile ? '4vw' : '1vw'}` }} className='p-0 pt-0 m-0 textCerti'>{provider}</p>
                             </div>
                             <div style={{ marginTop: '2vw', padding: '0 .9vw 0 .9vw' }} className='d-flex flex-column align-items-center'>
-                                <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: '1.2vw' }} className='p-0 m-0'>Description:</h3>
-                                <p style={{ fontFamily: 'var(--mont)', fontSize: '1vw', marginTop: '1vw' }} className='p-0'>{desc}</p>
+                                <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '5vw' : '1.2vw'}` }} className='p-0 m-0'>Description:</h3>
+                                <p style={{ fontFamily: 'var(--mont)', fontSize: `${isMobile ? '4vw' : '1vw'}`, marginTop: '1vw' }} className='p-0'>{desc}</p>
                             </div>
                         </div>
                     </div>

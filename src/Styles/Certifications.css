@@ -134,8 +134,8 @@
     }
 
     .imgCarrusel {
-        height: 85vw;
-        width: 85vw;
+        height: 80vw;
+        width: 80vw;
     }
 
     .carrusel {
@@ -149,10 +149,11 @@
 
     .btnMore {
         font-size: 5vw;
-        width: 85vw;
+        width: 80vw;
         height: auto;
         padding: 2vw;
         border: .2vw solid var(--negro);
+        border-top: none;
     }
 
     .btnNavigation {
@@ -161,5 +162,21 @@
         margin: 0;
         cursor: pointer;
         font-size: 13vw;
+    }
+
+    .modal-content {
+        border-radius: 0 !important;
+        height: max-content !important;
+        width: 90vw !important;
+        min-width: 45vw !important;
+    }
+
+    .modal-header {
+        padding: 2.5vw !important;
+    }
+
+    .imgModal{
+        height: 70vw;
+        width: 70vw;
     }
 }
