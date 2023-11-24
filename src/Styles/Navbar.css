@@ -2,8 +2,7 @@
     width: 100vw;
     height: max-content;
     z-index: 100;
-    background-color: rgba(246, 222, 191, 0.76) !important;
-    backdrop-filter: blur(10px);
+    background-color: var(--piel);
 }
 
 .navIcono {
@@ -87,7 +86,8 @@
 
 @media (max-width: 992px) {
     .navBar {
-        background-color: var(--piel);
+        background-color: var(--pielEspecial);
+        backdrop-filter: blur(3px);
         height: auto;
         padding: 0 2vw !important;
     }
@@ -98,19 +98,21 @@
 
     .navList {
         clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-        width: 100%;
         height: 0;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         gap: 0px;
         padding: 0;
+        transition: height .3s ease, clip-path .3s ease;
     }
 
     .collapsar{
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
         height: 100vh;
+        transition: height .3s ease, clip-path .3s ease;
     }
 
     .logoPrincipal {
