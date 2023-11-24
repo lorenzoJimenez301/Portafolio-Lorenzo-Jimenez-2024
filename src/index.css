@@ -39,3 +39,8 @@ body {
 footer {
     flex: 2;
 }
+
+a{
+    color: transparent;
+    text-decoration: none !important;
+}

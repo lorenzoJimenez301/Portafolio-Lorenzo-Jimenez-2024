@@ -52,7 +52,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
           </Link>
         </div>
         <div className="samuraiContainer d-flex align-items-end justify-content-center justify-content-lg-end">
-          <img loading="lazy" className="samurai" src={srcImagenMostrada} alt="samurai" />
+          <img className="samurai" src={srcImagenMostrada} alt="samurai" />
         </div>
       </div>
     </section>

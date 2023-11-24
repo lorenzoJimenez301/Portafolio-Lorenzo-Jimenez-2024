@@ -4,7 +4,7 @@ import { WebDevelopment } from './WebDevelopment';
 import { GraphicDesign } from '../Components/GrapichDesign';
 import { CSSTransition } from 'react-transition-group';
 
-export const AboutMe = ({ changeMode }) => {
+export const AboutMe = () => {
     const [isGraphicDesign, setIsGraphicDesign] = useState(false);
     const [isFrontEnd, setIsFrontEnd] = useState(true);
     const transitionRef = useRef(null);
@@ -23,7 +23,7 @@ export const AboutMe = ({ changeMode }) => {
             <article className='skills1 d-flex justify-content-center align-items-center'>
                 <div className='skills1Container d-flex flex-column '>
                     <h2 className='skillsTitle p-0 m-0'>Experience</h2>
-                    <h3 className='skills1SubTitle p-0 m-0'>and Skills</h3>
+                    <h3 className='skills1SubTitle p-0 m-0'>& Skills</h3>
                     <p className='m-0 skills1P'>
                         I am a web developer and programmer with solid experience in graphic design. Passionate about <strong>creating intuitive and engaging digital solutions that fuse functionality with aesthetic design.</strong>
                     </p>
