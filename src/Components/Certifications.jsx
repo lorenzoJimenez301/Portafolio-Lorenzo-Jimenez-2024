@@ -91,7 +91,7 @@ export const Certifications = () => {
             <article className='certi1 d-flex justify-content-center align-items-center'>
                 <div className='cert1TitleContainer'>
                     <h2 className='certiTitle m-0 p-0'>Certifications</h2>
-                    <h3 className='certiSubTitle m-0 p-0'>and Degrees</h3>
+                    <h3 className='certiSubTitle m-0 p-0'>& Degrees</h3>
                 </div>
             </article>
             <article className='certi2 d-flex justify-content-center align-items-center'>

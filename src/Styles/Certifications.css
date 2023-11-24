@@ -78,17 +78,18 @@
 }
 
 .modal {
+    overflow: hidden !important;
     transform: translate3d(0, 0, 0) !important;
 }
 
 .modal-content {
     border-radius: 0 !important;
-    height: max-content !important;
     width: 60vw !important;
     min-width: 45vw !important;
 }
 
 .modal-dialog {
+    height: 100% !important;
     max-width: 100% !important;
 }
 

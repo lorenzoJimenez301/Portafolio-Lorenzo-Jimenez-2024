@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { AboutMe } from './Components/AboutMe';
 import { InterIndex } from './Components/InterIndex';
 import { Certifications } from './Components/Certifications';
+import { Projects } from './Components/Projects';
 
 function App() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -20,13 +21,9 @@ function App() {
     var img2 = new Image();
     img2.src = samuraiNegro;
   })
-
   const [imagenURL1, setImagenURL1] = useState(samuraiNegro);
   const [imagenURL2, setImagenURL2] = useState(samuraiBlanco);
-
   const [mostrarPrimeraImagen, setMostrarPrimeraImagen] = useState(true);
-
-
   const handleImagenCambiada = (nuevaImagen) => {
     if (mostrarPrimeraImagen) {
       setImagenURL1(nuevaImagen);
@@ -35,9 +32,6 @@ function App() {
     }
     setMostrarPrimeraImagen(!mostrarPrimeraImagen);
   };
-
-
-
   return (
     <>
       <Navbar onImagenCambiada={handleImagenCambiada} />
@@ -50,6 +44,7 @@ function App() {
               mostrarPrimeraImagen={mostrarPrimeraImagen} />} />
           <Route path='/AboutMe' element={<AboutMe />} />
           <Route path='/Certifications' element={<Certifications />} />
+          <Route path='/Projects' element={<Projects />} />
         </Routes>
       </div>
       <InterIndex />

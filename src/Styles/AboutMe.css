@@ -66,6 +66,7 @@
     border-bottom: .1vw solid var(--negro);
     padding: 0 0 1vw 0;
     font-size: 1.2vw;
+    font-family: var(--mont);
 }
 
 .skillsDetailsContainer {
