@@ -1,0 +1,59 @@
+import React, { useState } from 'react';
+import '../Styles/Contact.css';
+import emailjs from 'emailjs-com';
+
+export const Contact = () => {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [msj, setMsj] = useState('');
+
+    const handleEmail = (e) => {
+        e.preventDefault();
+
+        try {
+            emailjs.send("service_i2msqks", "template_fblx3zs", {
+                nombre: name,
+                correo: email,
+                mensaje: msj,
+            }, '-T4snFchYKS9wXzey');
+
+            alert('Mensaje Enviado')
+        } catch (e) {
+            alert('Mensaje no enviado' + e);
+        }
+        setName('');
+        setEmail('');
+        setMsj('');
+    }
+
+    return (
+        <section className='contactSection d-flex justify-content-center align-items-center flex-column'>
+            <div className='contactTitleContainer'>
+                <div className='text-center'>
+                    <h2 className='p-0 m-0 contactTitle'>Contact</h2>
+                    <h3 className='p-0 m-0 contactSubTitle'>Send me a message!</h3>
+                </div>
+            </div>
+            <div className='formContainer'>
+                <form onSubmit={handleEmail} className='formContact d-flex flex-column justify-content-center align-items-center'>
+                    <div className='d-flex flex-column w-100 formItem'>
+                        <label className='labelContact' htmlFor="name">Full Name</label>
+                        <input required onChange={(e)=> setName(e.target.value)} value={name} className='formInput' type="text" name="name" id="name" />
+                    </div>
+                    <div className='d-flex flex-column w-100 formItem'>
+                        <label className='labelContact' htmlFor="email">Email</label>
+                        <input required onChange={(e)=> setEmail(e.target.value)} value={email} className='formInput' type="email" name="email" id="email" />
+                    </div>
+                    <div className='d-flex flex-column w-100 formItem'>
+                        <label className='labelContact' htmlFor="msj">Message</label>
+                        <textarea required onChange={(e)=> setMsj(e.target.value)} value={msj} className='textArea' name="msj" id="msj" ></textarea>
+                    </div>
+                    <div className='w-100 text-center formFooter'>
+                        <button className='btnSend'>Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    );
+}

@@ -11,6 +11,7 @@ import { AboutMe } from './Components/AboutMe';
 import { InterIndex } from './Components/InterIndex';
 import { Certifications } from './Components/Certifications';
 import { Projects } from './Components/Projects';
+import { Contact } from './Components/Contact';
 
 function App() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -45,6 +46,7 @@ function App() {
           <Route path='/AboutMe' element={<AboutMe />} />
           <Route path='/Certifications' element={<Certifications />} />
           <Route path='/Projects' element={<Projects />} />
+          <Route path='/Contact' element={<Contact/>} />
         </Routes>
       </div>
       <InterIndex />

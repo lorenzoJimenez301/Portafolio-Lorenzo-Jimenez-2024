@@ -1,4 +1,5 @@
 footer {
+    height: 200px;
     background-color: #000000;
     color: var(--blanco);
     bottom: 0px;
@@ -29,7 +30,7 @@ footer {
 }
 
 .LogoWhite {
-    height: 9vw;
+    height: 7vw;
 }
 
 .pFooter {
@@ -43,13 +44,13 @@ footer {
 
 @media (max-width: 992px) {
     .LogoWhite {
-        height: 80px;
+        height: 15vw;
     }
     .pFooter {
         font-size: 2.7vw;
     }
     .footerLink {
-        font-size: 6vw;
+        font-size: 4.5vw;
     }
     .hrFooter {
         width: 25vw;

@@ -52,7 +52,7 @@ const ModalProject = ({ id, title, desc, img, tecno1, tecno2, tecno3, tecno4 }) 
     return (
         <div id={id} className='modal fade' data-bs-backdrop='static' data-bs-keyboard='false' aria-labelledby='staticBackdropLabel' aria-hidden='true'>
             <div className='modal-dialog modal-dialog-centered p-0 m-0 d-flex justify-content-center align-items-center'>
-                <div style={{ fontFamily: 'var(--mont)' }} className='modal-content'>
+                <div style={{ fontFamily: 'var(--mont)' }} className='modal-content modelProjectsContent'>
                     <div className='modal-header'>
                         <h2 className='p-0 m-0' style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '4vw' : '2vw'}` }} >{title}</h2>
                         <RxCross1 style={{ color: '#000', fontSize: `${isMobile ? '6.5vw' : '2vw'}` }} type="button" className="btnclose" data-bs-dismiss="modal" aria-label="Close" />
@@ -97,7 +97,7 @@ const ProjectsWebDevelopment = () => {
 
 const ProjectsGrapich = () => {
     return (
-        <></>
+        <><h4 style={{color: 'var(--negro)'}}>Coming Soon! :3</h4></>
     );
 }
 
@@ -111,11 +111,11 @@ export const Projects = () => {
     return (
         <section className='projectsSection'>
             <div className='projectsTitleContainer'>
-                <h2 className='projectTitle'>Projects</h2>
-                <h3 className='projectSubTitle'>Personal & Professional</h3>
+                <h2 className='projectTitle p-0 m-0'>Projects</h2>
+                <h3 className='projectSubTitle p-0 m-0'>Personal & Professional</h3>
             </div>
             <div className='projectsContainer'>
-                <div className='projectsCate d-flex flex-row align-items-center'>
+                <div className='projectsCate d-flex flex-row justify-content-start align-items-center'>
                     <button className={`btnProjects ${!isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(false)}>Web Development</button>
                     <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
                 </div>

@@ -85,7 +85,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     height: 100%;
     transition: height .2s ease, clip-path .2s ease;
-    background-color: rgba(0, 0, 0, 0.644);
+    background-color: rgba(0, 0, 0, 0.822);
 }
 
 .projectOpc {
@@ -110,18 +110,18 @@
     transform: translate3d(0, 0, 0) !important;
 }
 
-.modal-content {
+.modelProjectsContent {
     border-radius: 0 !important;
     height: auto !important;
-    width: 5vw !important;
-    min-width: 39vw !important;
+    width: 30vw !important;
+    min-width: 30vw !important;
 }
 
 .modal-dialog {
     max-width: 100% !important;
 }
 
-.modal-body-projects{
+.modal-body-projects {
     padding: 0;
 }
 
@@ -130,49 +130,53 @@
 }
 
 .imgModalProjects {
-    height: 20vw;
+    height: 16vw;
     width: 100%;
     object-fit: cover;
 }
-.modalFooter{
-    padding: 3vw 0 3vw 0;
+
+.modalFooter {
+    padding: 2.5vw 0 2.5vw 0;
 }
 
-.textModal{
+.textModal {
     padding: 3vw 7vw 0 7vw;
 }
-.textModalContainer{
+
+.textModalContainer {
     padding: 0;
 }
 
 @media (max-width: 992px) {
     .projectsSection {
-        padding: 40vw 0 20vw ;
+        padding: 40vw 0 20vw;
     }
-    .modal-content {
+
+    .modelProjectsContent {
         width: 79vw !important;
     }
 
-    .projectsTitleContainer{
+    .projectsTitleContainer {
+        gap: 1vw;
         padding: 0 8vw 0 8vw;
     }
 
-    .projectsContainer{
+    .projectsContainer {
         padding: 10vw 8vw 0 8vw;
     }
 
-    .projectsCate{
-        gap: 14vw;
+    .projectsCate {
+        gap: 7vw;
         justify-content: center;
     }
 
-    .btnProjects{
+    .btnProjects {
         font-size: 3.5vw;
     }
 
     .projectTitle {
-        font-size: 13vw;
-        line-height: 14vw;
+        font-size: 15vw;
+        line-height: 20vw;
         text-indent: -.6vw;
         letter-spacing: -0.1vw;
     }
@@ -193,22 +197,32 @@
     }
 
     .projectInfo {
-        padding: 2vw;
-        height: auto;
-        position: relative;
-        background-color: var(--rojoPrincipal);
-        clip-path:none;
+        padding: 0vw;
+        height: 100%;
+        clip-path: none;
         font-size: 10vw;
         gap: 15vw;
+        background-color: transparent;
+        color: var(--blanco);
     }
+
+    .projectOpc {
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+
     .down {
         font-size: 10vw;
         padding: 0 0 3vw 0;
         display: none;
     }
-    .aProject{
+
+    .aProject {
         display: none;
     }
+
     .projectImg {
         width: 100%;
         height: auto;
@@ -216,7 +230,7 @@
         border: .1vw solid var(--negro);
         border-bottom: none;
     }
-    
+
     .projectsContainerGrid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));

@@ -17,7 +17,7 @@
     color: var(--negro);
     font-family: var(--mont);
     font-weight: bold;
-    font-size: 6.5vw;
+    font-size: 6vw;
     line-height: 6vw;
     text-indent: 0;
     letter-spacing: -.2 vw;
@@ -27,7 +27,7 @@
     color: var(--grisPrincipal);
     font-family: var(--lato);
     font-weight: normal;
-    font-size: 3vw;
+    font-size: 2.8vw;
     line-height: 3vw;
     text-indent: 0;
 }

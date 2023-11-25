@@ -1,0 +1,147 @@
+.contactSection {
+    height: 100vh;
+    width: 100%;
+}
+
+.contactTitleContainer,
+.formContainer {
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContact {
+    font-family: var(--mont);
+    font-size: 1vw;
+    font-weight: bold;
+    height: 30vw;
+    width: 25vw;
+    padding: 3vw 3vw 3vw 3vw;
+}
+
+.formItem {
+    color: var(--negro);
+    margin: 1vw 0 0 0;
+}
+
+.formFooter {
+    padding: .5vw 0;
+}
+
+.formInput {
+    height: 1.8vw;
+    margin: .3vw 0;
+    border: .1vw solid var(--negro);
+    outline: none;
+    font-size: .8vw !important;
+    padding-left: .5vw;
+}
+
+.textArea {
+    height: 10vw;
+    margin: .3vw 0;
+    border: .1vw solid var(--negro);
+    outline: none;
+    font-size: .8vw !important;
+}
+
+.btnSend {
+    margin-top: 1vw;
+    border: none;
+    background-color: var(--rojoPrincipal);
+    color: var(--blanco);
+    padding: .3vw 1vw;
+    transition: transform .5s ease;
+    font-size: 1vw;
+}
+
+.btnSend:hover {
+    transform: scale(1.2);
+    transition: transform .5s ease;
+}
+
+.contactTitle {
+    color: var(--negro);
+    font-family: var(--mont);
+    font-weight: bold;
+    font-size: 6.5vw;
+    line-height: 6vw;
+    text-indent: 0;
+    letter-spacing: -.2 vw;
+}
+
+.contactSubTitle {
+    color: var(--grisPrincipal);
+    font-family: var(--lato);
+    font-weight: normal;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    text-indent: 0;
+}
+
+@media (max-width: 992px) {
+    .contactSection {
+        height: 100vh;
+        width: 100%;
+        padding: 120vw 0 100vw 0;
+    }
+
+    .contactTitleContainer,
+    .formContainer {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .formContact {
+        font-family: var(--mont);
+        font-size: 1vw;
+        font-weight: bold;
+        height: auto;
+        width: 100%;
+        padding: 6vw 8vw;
+    }
+
+    .formInput {
+        height: 10vw;
+        width: 100%;
+        margin: .3vw 0;
+        border: .1vw solid var(--negro);
+        outline: none;
+        font-size: .8vw !important;
+        padding-left: .5vw;
+    }
+
+    .contactTitle {
+        font-size: 15vw;
+        line-height: 8vw;
+    }
+
+    .contactSubTitle {
+        font-size: 10vw;
+        line-height: 14vw;
+    }
+    .formItem {
+        margin-top: 7vw;
+        font-size: 4vw;
+    }
+    .textArea {
+        height: 50vw;
+    }
+    .btnSend {
+        margin-top: 6vw;
+        padding: 1.3vw 4vw;
+        font-size: 5vw;
+    }
+}
+@media (max-height: 650px) {
+    .contactSection {
+        padding: 150vw 0;
+    }
+}
