@@ -73,7 +73,7 @@
     align-items: center;
     width: 100%;
     position: absolute;
-    font-size: 3vw;
+    font-size: 2.5vw;
     bottom: 0px;
     transition: height .2s ease, clip-path .2s ease;
     border: .1vw solid var(--negro);
@@ -97,12 +97,12 @@
 }
 
 .down {
-    font-size: 3.2vw;
+    font-size: 2.5vw;
 }
 
 .aProject {
-    height: 3vw;
-    width: 3vw;
+    height: 2.5vw;
+    width: 2.5vw;
     color: var(--blanco);
 }
 
@@ -112,17 +112,21 @@
 
 .modal-content {
     border-radius: 0 !important;
-    height: max-content !important;
-    width: 60vw !important;
-    min-width: 45vw !important;
+    height: auto !important;
+    width: 5vw !important;
+    min-width: 39vw !important;
 }
 
 .modal-dialog {
     max-width: 100% !important;
 }
 
+.modal-body-projects{
+    padding: 0;
+}
+
 .imgTecnoModal {
-    height: 3vw;
+    height: 2vw;
 }
 
 .imgModalProjects {
@@ -130,13 +134,23 @@
     width: 100%;
     object-fit: cover;
 }
+.modalFooter{
+    padding: 3vw 0 3vw 0;
+}
+
+.textModal{
+    padding: 3vw 7vw 0 7vw;
+}
+.textModalContainer{
+    padding: 0;
+}
 
 @media (max-width: 992px) {
     .projectsSection {
         padding: 40vw 0 20vw ;
     }
     .modal-content {
-        width: 85vw !important;
+        width: 79vw !important;
     }
 
     .projectsTitleContainer{
@@ -144,11 +158,11 @@
     }
 
     .projectsContainer{
-        text-align: center;
         padding: 10vw 8vw 0 8vw;
     }
 
     .projectsCate{
+        gap: 14vw;
         justify-content: center;
     }
 
@@ -175,18 +189,14 @@
     }
 
     .imgTecnoModal {
-        height: 8vw;
-    }
-
-    .modal-body {
-        padding: 1vw !important;
+        height: 6vw;
     }
 
     .projectInfo {
         padding: 2vw;
         height: auto;
         position: relative;
-        background-color: var(--grisPrincipal);
+        background-color: var(--rojoPrincipal);
         clip-path:none;
         font-size: 10vw;
         gap: 15vw;
@@ -204,6 +214,7 @@
         height: auto;
         max-width: 100%;
         border: .1vw solid var(--negro);
+        border-bottom: none;
     }
     
     .projectsContainerGrid {
