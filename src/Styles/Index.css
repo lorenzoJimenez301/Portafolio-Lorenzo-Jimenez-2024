@@ -115,7 +115,7 @@
 
 @media (max-width: 992px) {
     .indexContainer {
-        height: 100vh;
+        height: 100%;
     }
 
     .heroContainer {

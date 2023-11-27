@@ -1,8 +1,8 @@
 footer {
-    height: 200px;
+    position: relative;
+    height: 50vw;
     background-color: #000000;
     color: var(--blanco);
-    bottom: 0px;
 }
 
 .containerLinkFooter {

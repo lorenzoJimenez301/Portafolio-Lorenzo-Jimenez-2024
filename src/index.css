@@ -2,7 +2,6 @@
 
 :root {
     --piel: #F6DEBF;
-    --pielEspecial: rgba(246, 222, 191, 0.856);
     --negro: #000000;
     --blanco: #ffffff;
     --grisPrincipal: #1D1D1D;
@@ -18,14 +17,13 @@
 
 html,
 body {
-    height: 100%;
-    width: 100%;
     overflow-x: hidden;
     margin: 0;
+    position: relative;
 }
 
 #root {
-    min-height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: var(--piel);
@@ -34,10 +32,6 @@ body {
 
 .App {
     flex: 1;
-}
-
-footer {
-    flex: 2;
 }
 
 a{

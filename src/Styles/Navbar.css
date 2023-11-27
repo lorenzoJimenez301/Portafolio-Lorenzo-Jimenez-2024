@@ -1,8 +1,22 @@
-.navBar {
-    width: 100vw;
+.navBarPrincipal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     height: max-content;
-    z-index: 100;
-    background-color: var(--piel);
+}
+
+.navBar2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.btnNavContainer{
+    height: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .navIcono {
@@ -21,6 +35,7 @@
 
 .navList {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 3vw;
     padding: 0 2vw 0 0;
@@ -85,15 +100,33 @@
 
 
 @media (max-width: 992px) {
-    .navBar {
-        background-color: var(--pielEspecial);
-        backdrop-filter: blur(3px);
-        height: auto;
-        padding: 0 2vw !important;
+    .navBarPrincipal {
+        position: absolute;
+        /* Posición absoluta */
+        top: 0;
+        width: 100%;
+        /* Ancho del viewport */
+        z-index: 1000;
+        height: 100%;
+        padding: 0 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
 
-    .listContainer {
+    .navBar2 {
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        height: 0;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:start;
+        gap: 0px;
+        padding: 0;
+        transition: height .5s ease, clip-path .7s ease;
+        background-color: #f6debffb;
     }
 
     .navList {
@@ -103,16 +136,28 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content:center;
         gap: 0px;
         padding: 0;
-        transition: height .3s ease, clip-path .3s ease;
+        transition: height .5s ease, clip-path .7s ease;
     }
 
-    .collapsar{
+    .collapsar {
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-        height: 100vh;
-        transition: height .3s ease, clip-path .3s ease;
+        height: 100%;
+        transition: height .8s ease, clip-path .7s ease;
+    }
+
+    .btnNavContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .listContainer {
+        width: 100%;
     }
 
     .logoPrincipal {
@@ -129,15 +174,16 @@
     }
 
     .navItem {
-        font-size: 5vw;
+        font-size: 7vw;
     }
-    .navItem:active{
+
+    .navItem:active {
         color: var(--rojoPrincipal);
     }
 }
 
 @media (max-height:500px) {
-    .navBar{
+    .navBarPrincipal {
         position: relative !important;
     }
 }

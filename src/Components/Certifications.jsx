@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Certifications.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Navigation } from 'swiper/modules';
 import cert1 from '../Images/Certifications/Cert1.png';
 import cert2 from '../Images/Certifications/Cert2.png';
 import cert3 from '../Images/Certifications/Cert3.png';
@@ -29,22 +29,22 @@ const MySlider = () => {
             className='carrusel m-0 p-0'
         >
             <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='lazy' className='imgCarrusel' src={cert1} />
+                <img  alt='img'loading='lazy' className='imgCarrusel' src={cert1} />
                 <h3 className='titleCerti'>Responsive Web Design</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#ResponsiveWeb'>More</button>
             </SwiperSlide>
             <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='lazy' className='imgCarrusel' src={cert2} />
+                <img alt='img'  loading='lazy' className='imgCarrusel' src={cert2} />
                 <h3 className='titleCerti'>Front End Developer</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#frontEndLibraries'>More</button>
             </SwiperSlide>
             <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='lazy' className='imgCarrusel' src={cert3} />
+                <img alt='img'  loading='lazy' className='imgCarrusel' src={cert3} />
                 <h3 className='titleCerti'>Soft Skills</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#softSkills'>More</button>
             </SwiperSlide>
             <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='lazy' className='imgCarrusel' src={cert4} />
+                <img alt='img'  loading='lazy' className='imgCarrusel' src={cert4} />
                 <h3 className='titleCerti'>High school</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#bachi'>More</button>
             </SwiperSlide>

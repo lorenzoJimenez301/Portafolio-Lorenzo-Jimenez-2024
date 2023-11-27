@@ -35,8 +35,8 @@ function App() {
   };
   return (
     <>
-      <Navbar onImagenCambiada={handleImagenCambiada} />
       <div className='App'>
+      <Navbar onImagenCambiada={handleImagenCambiada} />
         <Routes>
           <Route path='/' element={
             <Index
@@ -48,9 +48,9 @@ function App() {
           <Route path='/Projects' element={<Projects />} />
           <Route path='/Contact' element={<Contact/>} />
         </Routes>
-      </div>
-      <InterIndex />
+        <InterIndex />
       <Footer />
+      </div>
     </>
   );
 }
