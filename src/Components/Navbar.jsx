@@ -15,6 +15,23 @@ import { useImage } from 'react-image';
 
 export const Navbar = ({ onImagenCambiada }) => {
 
+    document.addEventListener('DOMContentLoaded', () => {
+        var img1 = new Image();
+        img1.src = Logo;
+    })  
+    document.addEventListener('DOMContentLoaded', () => {
+        var img1 = new Image();
+        img1.src = samuraiBlanco;
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+        var img2 = new Image();
+        img2.src = samuraiNegro;
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+        var img2 = new Image();
+        img2.src = LogoBlanco;
+    })
+
     const { src: srcImagen1 } = useImage({
         srcList: samuraiNegro,
     });
@@ -59,7 +76,7 @@ export const Navbar = ({ onImagenCambiada }) => {
 
     return (
         <nav className={`navBarPrincipal m-0 p-0`}>
-            <div style={{backgroundColor: 'var(--piel)', top: '0px'}} className='btnNavContainer'>
+            <div style={{ backgroundColor: 'var(--piel)', top: '0px' }} className='btnNavContainer'>
                 <a href='/'><img src={foto} className='logoPrincipal me-0 ' alt='logo' /></a>
                 {activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' />}
             </div>
