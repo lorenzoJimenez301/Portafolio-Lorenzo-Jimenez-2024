@@ -3,7 +3,7 @@ import Logo from '../Images/1.png';
 import LogoBlanco from '../Images/2.png';
 import '../Styles/Navbar.css';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { FaMoon } from 'react-icons/fa';
 import { MdSunny } from 'react-icons/md';
 import { useMediaQuery } from 'react-responsive';
@@ -11,26 +11,13 @@ import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import samuraiBlanco from '../Images/Samurai_White.png';
 import samuraiNegro from '../Images/Samurai_Black.png';
 import { useImage } from 'react-image';
+import { ThemeContext } from './ThemeContext';
+import fondoGris from '../Images/FondoGris.png';
+import fondoPiel from '../Images/FondoPiel.png';
 
+export const Navbar = ({ onImagenCambiada}) => {
 
-export const Navbar = ({ onImagenCambiada }) => {
-
-    document.addEventListener('DOMContentLoaded', () => {
-        var img1 = new Image();
-        img1.src = Logo;
-    })  
-    document.addEventListener('DOMContentLoaded', () => {
-        var img1 = new Image();
-        img1.src = samuraiBlanco;
-    })
-    document.addEventListener('DOMContentLoaded', () => {
-        var img2 = new Image();
-        img2.src = samuraiNegro;
-    })
-    document.addEventListener('DOMContentLoaded', () => {
-        var img2 = new Image();
-        img2.src = LogoBlanco;
-    })
+    const { changeBackgroundImage } = useContext(ThemeContext)
 
     const { src: srcImagen1 } = useImage({
         srcList: samuraiNegro,
@@ -38,6 +25,7 @@ export const Navbar = ({ onImagenCambiada }) => {
 
     const { src: srcImagen2 } = useImage({
         srcList: samuraiBlanco,
+        
     });
     const [foto, setFoto] = useState(Logo);
     const [isOn, setIsOn] = useState(false);
@@ -55,12 +43,14 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--negro', '#ffffff');
             root.style.setProperty('--grisPrincipal', pielPrincipal);
             onImagenCambiada(srcImagen1);
+            changeBackgroundImage(fondoGris);
         } else {
             setFoto(Logo)
             root.style.setProperty('--piel', pielPrincipal);
             root.style.setProperty('--negro', '#000000');
             root.style.setProperty('--grisPrincipal', grisPrincipal);
             onImagenCambiada(srcImagen2);
+            changeBackgroundImage(fondoPiel);
         }
 
     }
@@ -75,13 +65,13 @@ export const Navbar = ({ onImagenCambiada }) => {
     }
 
     return (
-        <nav className={`navBarPrincipal m-0 p-0`}>
-            <div style={{ backgroundColor: 'var(--piel)', top: '0px' }} className='btnNavContainer'>
-                <a href='/'><img src={foto} className='logoPrincipal me-0 ' alt='logo' /></a>
+        <nav style={{ position: 'absolute' }} className={`navBarPrincipal m-0 p-0`}>
+            <div className='btnNavContainer'>
+                <a href='/'><img loading='eager' src={foto} className='logoPrincipal me-0 ' alt='logo' /></a>
                 {activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' />}
             </div>
             <div className={`${!activo ? 'collapsar' : ''} navBar2`}>
-                <ul className={`${!activo ? 'collapsar' : ''} navList`}>
+                <ul className={`${!activo ? 'collapsar' : ''} m-0 navList`}>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/'} >Menu</Link></li>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/AboutMe'} >About Me</Link></li>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/Certifications'} >Certifications</Link></li>
@@ -97,4 +87,4 @@ export const Navbar = ({ onImagenCambiada }) => {
             </div>
         </nav>
     );
-}      
+}

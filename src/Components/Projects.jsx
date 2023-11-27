@@ -20,7 +20,9 @@ import Html from '../Images/LogoTecno/HTML LOGO.png';
 import Css from '../Images/LogoTecno/CSS LOGO.png';
 import Php from '../Images/LogoTecno/PHP LOGO.png';
 import react from '../Images/LogoTecno/REACT LOGO.png';
-import Bootstrap from '../Images/LogoTecno/BOOTSTRAP LOGO.png'
+import Bootstrap from '../Images/LogoTecno/BOOTSTRAP LOGO.png';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
 const ProjectItem = ({ img, url, id }) => {
 
@@ -107,9 +109,9 @@ export const Projects = () => {
     const handleChange = (isGraphic) => {
         setIsGraphicDesign(isGraphic);
     }
-
+    const { backgroundImage } = useContext(ThemeContext);
     return (
-        <section className='projectsSection'>
+        <section style={{backgroundImage: `url(${backgroundImage})`}} className='projectsSection'>
             <div className='projectsTitleContainer'>
                 <h2 className='projectTitle p-0 m-0'>Projects</h2>
                 <h3 className='projectSubTitle p-0 m-0'>Personal & Professional</h3>

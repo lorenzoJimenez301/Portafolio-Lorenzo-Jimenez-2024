@@ -5,9 +5,6 @@ import App from './App';
 import 'reset.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
-import { Footer } from './Components/Footer';
-
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

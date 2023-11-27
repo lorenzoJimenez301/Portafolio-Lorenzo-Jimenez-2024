@@ -13,6 +13,8 @@ import 'swiper/css/pagination';
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 import { useMediaQuery } from 'react-responsive';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
 
 const MySlider = () => {
@@ -86,8 +88,9 @@ const Modal = ({ id, title, img, provider, desc }) => {
 }
 
 export const Certifications = () => {
+    const { backgroundImage } = useContext(ThemeContext);
     return (
-        <section className='certificationsContainer d-flex flex-column justify-content-center align-items-center flex-lg-row'>
+        <section style={{backgroundImage: `url(${backgroundImage})`}} className='certificationsContainer d-flex flex-column justify-content-center align-items-center flex-lg-row'>
             <article className='certi1 d-flex justify-content-center align-items-center'>
                 <div className='cert1TitleContainer'>
                     <h2 className='certiTitle m-0 p-0'>Certifications</h2>

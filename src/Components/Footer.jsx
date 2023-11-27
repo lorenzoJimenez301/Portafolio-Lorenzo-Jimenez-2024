@@ -7,7 +7,7 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className='d-flex justify-content-center align-items-center pt-4'>
+    <footer className='d-flex justify-content-center align-items-center'>
       <div className='w-100 d-flex flex-column justify-content-center align-items-center'>
         <div>
           <img loading='lazy' className='LogoWhite' src={Logo} alt='' />

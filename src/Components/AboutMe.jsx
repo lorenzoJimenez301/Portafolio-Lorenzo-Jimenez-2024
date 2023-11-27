@@ -3,6 +3,8 @@ import '../Styles/AboutMe.css';
 import { WebDevelopment } from './WebDevelopment';
 import { GraphicDesign } from '../Components/GrapichDesign';
 import { CSSTransition } from 'react-transition-group';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
 export const AboutMe = () => {
     const [isGraphicDesign, setIsGraphicDesign] = useState(false);
@@ -17,9 +19,9 @@ export const AboutMe = () => {
     const changeSection = (isFront) => {
         setIsFrontEnd(isFront);
     }
-
+    const { backgroundImage } = useContext(ThemeContext);
     return (
-        <section className='superSkillsContainer d-flex flex-column flex-lg-row align-items-center'>
+        <section style={{backgroundImage: `url(${backgroundImage})`}} className='superSkillsContainer d-flex flex-column flex-lg-row align-items-center'>
             <article className='skills1 d-flex justify-content-center align-items-center'>
                 <div className='skills1Container d-flex flex-column '>
                     <h2 className='skillsTitle p-0 m-0'>Experience</h2>

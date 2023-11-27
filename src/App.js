@@ -12,6 +12,7 @@ import { InterIndex } from './Components/InterIndex';
 import { Certifications } from './Components/Certifications';
 import { Projects } from './Components/Projects';
 import { Contact } from './Components/Contact';
+import { ThemeProvider } from './Components/ThemeContext';
 
 function App() {
   document.addEventListener('DOMContentLoaded', () => {
@@ -34,9 +35,9 @@ function App() {
     setMostrarPrimeraImagen(!mostrarPrimeraImagen);
   };
   return (
-    <>
-      <div className='App'>
-      <Navbar onImagenCambiada={handleImagenCambiada} />
+    <div className='App'>
+      <ThemeProvider>
+        <Navbar onImagenCambiada={handleImagenCambiada} />
         <Routes>
           <Route path='/' element={
             <Index
@@ -46,12 +47,12 @@ function App() {
           <Route path='/AboutMe' element={<AboutMe />} />
           <Route path='/Certifications' element={<Certifications />} />
           <Route path='/Projects' element={<Projects />} />
-          <Route path='/Contact' element={<Contact/>} />
+          <Route path='/Contact' element={<Contact />} />
         </Routes>
         <InterIndex />
-      <Footer />
-      </div>
-    </>
+        <Footer />
+      </ThemeProvider>
+    </div>
   );
 }
 

@@ -3,6 +3,7 @@
     flex-direction: row;
     width: 100%;
     height: max-content;
+    background-color: transparent;
 }
 
 .navBar2{
@@ -114,6 +115,7 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
+        background-color: var();
     }
 
     .navBar2 {
@@ -155,6 +157,8 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        background-color: #f6debffb;
+
     }
 
     .listContainer {

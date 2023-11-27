@@ -1,5 +1,8 @@
 .certificationsContainer {
     height: 50vw;
+    background-image: url('../Images/FondoPiel.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .certi1,

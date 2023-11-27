@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../Styles/Contact.css';
 import emailjs from 'emailjs-com';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
 export const Contact = () => {
 
@@ -26,9 +28,9 @@ export const Contact = () => {
         setEmail('');
         setMsj('');
     }
-
+    const { backgroundImage } = useContext(ThemeContext);
     return (
-        <section className='contactSection d-flex justify-content-center align-items-center flex-column'>
+        <section style={{backgroundImage: `url(${backgroundImage})`}} className='contactSection d-flex justify-content-center align-items-center flex-column'>
             <div className='contactTitleContainer'>
                 <div className='text-center'>
                     <h2 className='p-0 m-0 contactTitle'>Contact</h2>

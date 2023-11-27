@@ -11,7 +11,7 @@ export const InterIndex = () => {
   ];
 
   return (
-    <div className='inter w-100 d-flex align-items-center justify-content-between'>
+    <div className='inter d-flex align-items-center justify-content-evenly'>
       {items.map((item, index) => (
         <h2 key={index}>
           {item.text} {item.icon}

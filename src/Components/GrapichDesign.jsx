@@ -12,9 +12,9 @@ export const GraphicDesign = () => {
   const [ancho3, setAncho3] = useState(0);
 
   useEffect(() => {
-      setAncho1(90);
-      setAncho2(90);
-      setAncho3(70);
+      setAncho1(50);
+      setAncho2(80);
+      setAncho3(90);
   }, []);
 
   return (

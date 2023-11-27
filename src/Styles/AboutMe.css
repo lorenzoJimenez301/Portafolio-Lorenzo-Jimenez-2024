@@ -1,5 +1,8 @@
 .superSkillsContainer {
-    height: 50vw;
+    padding: 8vw 0 6vw 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .skills1 {

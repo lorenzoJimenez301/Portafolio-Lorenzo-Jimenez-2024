@@ -6,19 +6,22 @@ import Typed from 'react-typed';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import '../Styles/Index.css';
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 
-export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen }) => {
+export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen, back }) => {
   const { src: srcImagenMostrada } = useImage({
     srcList: mostrarPrimeraImagen ? imagenURL1 : imagenURL2,
   });
 
   const words = ['Developer', 'Designer'];
   const isMobile = useMediaQuery({ maxWidth: 992 });
+  const { backgroundImage } = useContext(ThemeContext);
 
   return (
-    <section className="indexContainer d-flex align-items-end justify-content-evenly">
-      <div className="heroContainer d-flex flex-column flex-lg-row align-items-center justify-content-beetween w-100">
-        <div className="titleContainer d-flex flex-column align-items-center align-items-lg-start justify-content-center justify-content-lg-start mb-lg-0">
+    <section style={{backgroundImage: `url(${backgroundImage})`}} className="indexContainer d-flex align-items-end justify-content-evenly">
+      <div className="heroContainer">
+        <div className="titleContainer">
           <h1 className="title m-0">
             Hi!, I'm{' '}
             <Link className="text-decoration-none Lorenzo" to={isMobile ? '' : '/AboutMe'} id="Lorenzo">
@@ -52,7 +55,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
           </Link>
         </div>
         <div className="samuraiContainer d-flex align-items-end justify-content-center justify-content-lg-end">
-          <img className="samurai" src={srcImagenMostrada} alt="samurai" />
+          <img loading='eager' className="samurai" src={srcImagenMostrada} alt="samurai" />
         </div>
       </div>
     </section>
