@@ -6,7 +6,7 @@
     background-color: transparent;
 }
 
-.navBar2{
+.navBar2 {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-.btnNavContainer{
+.btnNavContainer {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -110,7 +110,7 @@
         width: 100%;
         /* Ancho del viewport */
         z-index: 1000;
-        height: 0;
+        height: 17vw;
         padding: 0 2vw;
         display: flex;
         flex-direction: column;
@@ -121,21 +121,21 @@
 
     .navBar2 {
         clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-        height: 0;
+        height: 0%;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content:start;
+        justify-content: start;
         gap: 0px;
         padding: 0;
         transition: height .5s ease, clip-path .7s ease;
-        background-color: #f6debffb;
+        background-color: var(--piel);
     }
 
     .navList {
         clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-        height: 0;
+        height: 0%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -152,13 +152,14 @@
         transition: height .5s ease, clip-path .7s ease;
     }
 
-    .btnNavContainer{
+    .btnNavContainer {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        background-color: #f6debffb;
+        background-color: var(--piel);
+        border-bottom: .1vw solid #ebd4b7;
     }
 
     .listContainer {

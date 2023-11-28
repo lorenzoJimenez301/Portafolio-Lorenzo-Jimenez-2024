@@ -4,6 +4,7 @@
     background-image: url('../Images/FondoPiel.png');
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 30vw 0 25vw 0;
 }
 
 .contactTitleContainer,
@@ -45,6 +46,8 @@
 
 .textArea {
     height: 10vw;
+    min-height: 10vw;
+    max-height: 10vw;
     margin: .3vw 0;
     border: .1vw solid var(--negro);
     outline: none;
@@ -117,7 +120,7 @@
         margin: .3vw 0;
         border: .1vw solid var(--negro);
         outline: none;
-        font-size: .8vw !important;
+        font-size: 4vw !important;
         padding-left: .5vw;
     }
 
@@ -135,7 +138,10 @@
         font-size: 4vw;
     }
     .textArea {
-        height: 50vw;
+        height: 40vw;
+        min-height: 40vw;
+        max-height: 40vw;
+        font-size: 4vw !important;
     }
     .btnSend {
         margin-top: 6vw;

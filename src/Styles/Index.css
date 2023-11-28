@@ -18,7 +18,7 @@
     height: 100%;
     width: 100%;
     gap: 1.5vw;
-    padding: 0 0 0 2vw;
+    padding: 0 0 0 3.5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +33,7 @@
 .samurai {
     height: 45vw;
 }
+
 .title {
     display: inline-flexbox;
     height: max-content;
@@ -120,6 +121,7 @@
 
 .interIcon {
     font-size: 2.8vw;
+    margin-left: 1vw;
 }
 
 @media (max-width: 992px) {
@@ -149,29 +151,32 @@
     .samuraiContainer {
         width: 100%;
         height: 100%;
-        padding: 30vw 0 0 0 ;
+        padding: 20vw 0 0 0;
     }
 
     .samurai {
         padding: 0px 0 0 0;
-        height: 400px;
+        height: 100vw;
     }
 
     .title {
-        font-size: 13vw;
+        font-size: 8vw;
         text-align: center;
         padding: 0;
         margin: 0;
         letter-spacing: -.5vw;
+        line-height: 10vw;
+        gap: 10vw;
     }
 
     .subTitle {
-        line-height: 7vw;
-        font-size: 6vw;
+        line-height: 11vw;
+        font-size: 7vw;
     }
 
-    #Lorenzo:hover {
-        text-shadow: .5vw .4vw 0px var(--rojoPrincipal);
+    #Lorenzo {
+        font-size: 22vw;
+        text-shadow: .9vw .4vw 0px var(--rojoPrincipal);
     }
 
     .btnPrincipal {
@@ -192,7 +197,8 @@
     }
 
     .interIcon {
-        font-size: 3.5vw;
+        font-size: 4.5vw;
+        margin-left: 1.5vw;
     }
 
     .SH {

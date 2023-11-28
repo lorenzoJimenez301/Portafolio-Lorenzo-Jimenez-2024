@@ -51,11 +51,12 @@
 .skillsContainer {
     color: var(--negro);
     height: 35vw;
-    width: max-content;
+    width: 37vw;
     min-width: 37vw;
     font-family: var(--mont);
     padding: 2vw;
     border: 1px solid var(--negro);
+    background-color: var(--pielDesvanecido); 
 }
 
 .skillsContainerTitleContainer {
@@ -167,11 +168,12 @@
     .skillsContainer {
         height: auto;
         width: 100vw;
-        padding: 7vw 0 0 0;
+        padding: 7vw 0 7vw 0;
+        min-width: none;
     }
 
     .skillsDetailsTitle {
-        padding: 7vw 0 10vw 0;
+        padding: 7vw 0 7vw 0;
         gap: 3vw;
         text-align: center;
         width: auto;
@@ -188,19 +190,20 @@
     .skillsDetailsContainer {
         padding: 0 5vw 10vw 5vw;
 
-        .btnControlSkills {
-            font-size: 4vw;
-        }
 
-        .btnFrontBack {
-            font-size: 3.5vw;
-        }
+    }
+    .btnControlSkills {
+        font-size: 4vw;
+    }
 
-        .skillsDetailsContainer {
-            height: auto;
-            width: 100%;
-            padding: 0 0 5vw 0;
-        }
+    .btnFrontBack {
+        font-size: 3.5vw;
+    }
+
+    .skillsDetailsContainer {
+        height: auto;
+        width: 100%;
+        padding: 0 0 5vw 0;
     }
 
 }
