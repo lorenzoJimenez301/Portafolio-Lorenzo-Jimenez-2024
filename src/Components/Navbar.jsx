@@ -65,7 +65,7 @@ export const Navbar = ({ onImagenCambiada}) => {
     }
 
     return (
-        <nav style={{ position: 'absolute' }} className={`navBarPrincipal m-0 p-0`}>
+        <nav style={{ position: 'absolute'}} className={`${!activo ? 'collapsar' : ''} navBarPrincipal m-0 p-0`}>
             <div className='btnNavContainer'>
                 <a href='/'><img loading='eager' src={foto} className='logoPrincipal me-0 ' alt='logo' /></a>
                 {activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' />}

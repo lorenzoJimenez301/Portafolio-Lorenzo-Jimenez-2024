@@ -24,7 +24,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen,
         <div className="titleContainer">
           <h1 className="title m-0">
             Hi!, I'm{' '}
-            <Link className="text-decoration-none Lorenzo" to={isMobile ? '' : '/AboutMe'} id="Lorenzo">
+            <Link className="text-decoration-none Lorenzo" to={isMobile ? '/AboutMe' : ''} id="Lorenzo">
               Lorenzo
             </Link>
           </h1>
