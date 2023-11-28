@@ -12,8 +12,8 @@ export const Footer = () => {
         <div>
           <img loading='lazy' className='LogoWhite' src={Logo} alt='' />
         </div>
-        <div className='d-flex flex-row align-items-center justify-content-center w-50 containerLinkFooter p-2 p-lg-5 pt-2 pt-lg-3'>
-          <hr className='hrFooter m-0 p-0 me-2' />
+        <div className='d-flex flex-row align-items-center justify-content-center w-50 containerLinkFooter'>
+          <hr className='hrFooter hr1' />
           <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/lorenx_jimenez301/'>
             <FaInstagram />
           </a>
@@ -23,16 +23,16 @@ export const Footer = () => {
           <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/lorenzojimenezabarca301/'>
             <FaLinkedin />
           </a>
-          <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://api.whatsapp.com/send?phone=87861758'>
+          <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://wa.me/50687861758'>
             <FaWhatsapp />
           </a>
           <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://github.com/lorenzoJimenez301'>
             <FaGithub />
           </a>
-          <hr className='hrFooter m-0 p-0 ms-2' />
+          <hr className='hrFooter hr2' />
         </div>
-        <div className='p-4 pt-2'>
-          <p className='p-0 m-0 pFooter'>© {year} Your Company. All rights reserved.</p>
+        <div className=''>
+          <p className='pFooter'>© {year} Your Company. All rights reserved.</p>
         </div>
       </div>
     </footer>

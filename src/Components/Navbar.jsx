@@ -15,9 +15,10 @@ import { ThemeContext } from './ThemeContext';
 import fondoGris from '../Images/FondoGris.png';
 import fondoPiel from '../Images/FondoPiel.png';
 
-export const Navbar = ({ onImagenCambiada}) => {
+export const Navbar = ({ onImagenCambiada }) => {
 
-    const { changeBackgroundImage } = useContext(ThemeContext)
+    const { changeBackgroundImage } = useContext(ThemeContext);
+    const { changeTheme } = useContext(ThemeContext);
 
     const { src: srcImagen1 } = useImage({
         srcList: samuraiNegro,
@@ -25,7 +26,7 @@ export const Navbar = ({ onImagenCambiada}) => {
 
     const { src: srcImagen2 } = useImage({
         srcList: samuraiBlanco,
-        
+
     });
     const [foto, setFoto] = useState(Logo);
     const [isOn, setIsOn] = useState(false);
@@ -39,18 +40,22 @@ export const Navbar = ({ onImagenCambiada}) => {
         if (!isOn) {
             setFoto(LogoBlanco);
             root.style.setProperty('--piel', grisPrincipal);
+            root.style.setProperty('--pielDesvanecido', '#3f3f3fa9');
             root.style.setProperty('--pielEspecial', grisPrincipal);
             root.style.setProperty('--negro', '#ffffff');
             root.style.setProperty('--grisPrincipal', pielPrincipal);
             onImagenCambiada(srcImagen1);
             changeBackgroundImage(fondoGris);
+            changeTheme('light');
         } else {
             setFoto(Logo)
             root.style.setProperty('--piel', pielPrincipal);
+            root.style.setProperty('--pielDesvanecido', null);
             root.style.setProperty('--negro', '#000000');
             root.style.setProperty('--grisPrincipal', grisPrincipal);
             onImagenCambiada(srcImagen2);
             changeBackgroundImage(fondoPiel);
+            changeTheme('dark');
         }
 
     }
@@ -65,7 +70,7 @@ export const Navbar = ({ onImagenCambiada}) => {
     }
 
     return (
-        <nav style={{ position: 'absolute'}} className={`${!activo ? 'collapsar' : ''} navBarPrincipal m-0 p-0`}>
+        <nav style={{ position: 'absolute' }} className={`${!activo ? 'collapsar' : ''} navBarPrincipal m-0 p-0`}>
             <div className='btnNavContainer'>
                 <a href='/'><img loading='eager' src={foto} className='logoPrincipal me-0 ' alt='logo' /></a>
                 {activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' />}

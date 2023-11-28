@@ -5,9 +5,9 @@ import '../Styles/Index.css';
 
 export const InterIndex = () => {
   const items = [
-    { text: 'Design', icon: <MdOutlineDesignServices className='interIcon ms-2 ms-lg-3 ms-xxl-3' /> },
-    { text: 'Development', icon: <FaCode className='interIcon ms-2 ms-lg-3 ms-xxl-3' /> },
-    { text: 'Deploy', icon: <MdOutlineWeb className='interIcon ms-2 ms-lg-3 ms-xxl-3' /> },
+    { text: 'Design', icon: <MdOutlineDesignServices className='interIcon' /> },
+    { text: 'Development', icon: <FaCode className='interIcon' /> },
+    { text: 'Deploy', icon: <MdOutlineWeb className='interIcon' /> },
   ];
 
   return (

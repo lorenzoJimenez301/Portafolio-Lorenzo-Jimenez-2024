@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Certifications.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import cert1 from '../Images/Certifications/Cert1.png';
 import cert2 from '../Images/Certifications/Cert2.png';
 import cert3 from '../Images/Certifications/Cert3.png';
@@ -22,31 +22,34 @@ const MySlider = () => {
         <Swiper
             spaceBetween={30}
             effect={'fade'}
-            modules={[EffectFade, Navigation]}
+            modules={[EffectFade, Navigation, Autoplay]}
             loop={true}
             navigation={{
                 nextEl: '.custom-next-button',
                 prevEl: '.custom-prev-button',
             }}
+            autoplay={{
+                delay: 2000,
+            }}
             className='carrusel m-0 p-0'
         >
-            <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img  alt='img'loading='lazy' className='imgCarrusel' src={cert1} />
+            <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
+                <img alt='img' loading='lazy' className='imgCarrusel' src={cert1} />
                 <h3 className='titleCerti'>Responsive Web Design</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#ResponsiveWeb'>More</button>
             </SwiperSlide>
-            <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img'  loading='lazy' className='imgCarrusel' src={cert2} />
+            <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
+                <img alt='img' loading='lazy' className='imgCarrusel' src={cert2} />
                 <h3 className='titleCerti'>Front End Developer</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#frontEndLibraries'>More</button>
             </SwiperSlide>
-            <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img'  loading='lazy' className='imgCarrusel' src={cert3} />
+            <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
+                <img alt='img' loading='lazy' className='imgCarrusel' src={cert3} />
                 <h3 className='titleCerti'>Soft Skills</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#softSkills'>More</button>
             </SwiperSlide>
-            <SwiperSlide style={{backgroundColor: 'var(--piel)'}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img'  loading='lazy' className='imgCarrusel' src={cert4} />
+            <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
+                <img alt='img' loading='lazy' className='imgCarrusel' src={cert4} />
                 <h3 className='titleCerti'>High school</h3>
                 <button className='btnMore' data-bs-toggle='modal' data-bs-target='#bachi'>More</button>
             </SwiperSlide>
@@ -56,7 +59,7 @@ const MySlider = () => {
 
 const Modal = ({ id, title, img, provider, desc }) => {
 
-    const isMobile = useMediaQuery({maxWidth: 992});
+    const isMobile = useMediaQuery({ maxWidth: 992 });
 
     return (
         <div className='modal fade' id={`${id}`} data-bs-backdrop='static' data-bs-keyboard='false' aria-labelledby='staticBackdropLabel' aria-hidden='true'>
@@ -70,8 +73,8 @@ const Modal = ({ id, title, img, provider, desc }) => {
                         <div className='w-50 d-flex justify-content-center align-items-center'>
                             <img loading='lazy' className='imgModal' src={img} alt="imgModal" />
                         </div>
-                        <div style={{width: `${isMobile ? '100' : '50'}`}} className='textModalContainer text-center d-flex flex-column justify-content-center align-items-center'>
-                            <div style={{ gap: '.8vw' , padding: `${isMobile ? '3vw' : ''}`}} className='d-flex flex-row align-items-center justify-content-center'>
+                        <div style={{ width: `${isMobile ? '100' : '50'}` }} className='textModalContainer text-center d-flex flex-column justify-content-center align-items-center'>
+                            <div style={{ gap: '.8vw', padding: `${isMobile ? '3vw' : ''}` }} className='d-flex flex-row align-items-center justify-content-center'>
                                 <h3 style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '5vw' : '1.2vw'}` }} className='p-0 m-0'>Provider:</h3>
                                 <p style={{ fontFamily: 'var(--mont)', fontSize: `${isMobile ? '4vw' : '1vw'}` }} className='p-0 pt-0 m-0 textCerti'>{provider}</p>
                             </div>
@@ -90,7 +93,7 @@ const Modal = ({ id, title, img, provider, desc }) => {
 export const Certifications = () => {
     const { backgroundImage } = useContext(ThemeContext);
     return (
-        <section style={{backgroundImage: `url(${backgroundImage})`}} className='certificationsContainer d-flex flex-column justify-content-center align-items-center flex-lg-row'>
+        <section style={{ backgroundImage: `url(${backgroundImage})` }} className='certificationsContainer d-flex flex-column justify-content-center align-items-center flex-lg-row'>
             <article className='certi1 d-flex justify-content-center align-items-center'>
                 <div className='cert1TitleContainer'>
                     <h2 className='certiTitle m-0 p-0'>Certifications</h2>
