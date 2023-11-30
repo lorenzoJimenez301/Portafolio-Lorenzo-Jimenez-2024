@@ -149,8 +149,3 @@
         font-size: 5vw;
     }
 }
-@media (max-height: 650px) {
-    .contactSection {
-        padding: 150vw 0;
-    }
-}

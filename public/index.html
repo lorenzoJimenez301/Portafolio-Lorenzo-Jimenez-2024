@@ -24,30 +24,6 @@
   <div id="root">
 
   </div>
-  <script>
-    var imagenes = [
-      { src: '/src/Images/1.png' },
-      { src: '/src/Images/2.png' },
-      { src: '/src/Images/FondoGris.png' },
-      { src: '/src/Images/FondoPiel.png' },
-      { src: '/src/Images/Logo_Lorenzo_White.pngg' },
-      { src: '/src/Images/Logo_Principal_Black.png' },
-      { src: '/src/Images/LogoHD.png' },
-      { src: '/src/Images/Samurai_Black.png' },
-      { src: '/src/Images/Samurai_White.png' },
-      // Agrega más imágenes según sea necesario
-    ];
-
-    function precargarImagenes() {
-      for (var i = 0; i < imagenes.length; i++) {
-        var img = new Image();
-        img.src = imagenes[i].src;
-      }
-    }
-
-    // Llama a la función para precargar las imágenes cuando se carga el DOM
-    document.addEventListener('DOMContentLoaded', precargarImagenes);
-  </script>
 </body>
 
 </html>
