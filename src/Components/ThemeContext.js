@@ -1,9 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, memo } from 'react';
 import fondoInicial from '../Images/FondoPiel.png'
 
 export const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = memo(({ children }) => {
     const [backgroundImage, setBackgroundImage] = useState(fondoInicial);
     const [theme, setTheme] = useState('dark');
 
@@ -19,4 +19,4 @@ export const ThemeProvider = ({ children }) => {
             {children}
         </ThemeContext.Provider>
     );
-};
+});
