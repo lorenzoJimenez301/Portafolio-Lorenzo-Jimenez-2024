@@ -10,6 +10,10 @@
     width: 50vw;
 }
 
+.certi2{
+    padding: 5vw 0 0 0;
+}
+
 .certiTitle {
     color: var(--negro);
     font-family: var(--mont);
@@ -76,32 +80,8 @@
     height: max-content;
 }
 
-.modal {
-    overflow: hidden !important;
-    transform: translate3d(0, 0, 0) !important;
-}
-
-.modal-content {
-    border-radius: 0 !important;
-    width: 60vw !important;
-    min-width: 45vw !important;
-}
-
-.modal-dialog {
-    height: 100% !important;
-    max-width: 100% !important;
-}
-
-.modal-header {
-    padding: 1vw !important;
-}
-
-.modal-body {
-    padding: 2vw !important;
-}
-
 .imgModal {
-    height: 20vw;
+    height: 15vw;
 }
 
 @media (max-width: 992px) {

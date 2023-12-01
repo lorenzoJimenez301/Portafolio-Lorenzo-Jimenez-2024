@@ -18,7 +18,7 @@ export const GraphicDesign = () => {
   }, []);
 
   return (
-    <ul style={{ marginTop: '7vw', padding: '0 0 0 2vw' }} className='listSkills listSkillsGraphic d-flex flex-column justify-content-center align-items-center '>
+    <ul style={{ marginTop: '7vw', padding: '0 0 0 2vw' }} className='listSkills listSkillsGraphic d-flex flex-column justify-content-center align-items-center'>
       <ProgressBar logo={psLogo} color={'#00acfe'} porcent={ancho1} />
       <ProgressBar logo={fgLogo} color={'#f04d1b'} porcent={ancho2} />
       <ProgressBar logo={cLogo} color={'#533cf3'} porcent={ancho3} />
