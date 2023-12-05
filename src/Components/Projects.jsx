@@ -36,8 +36,8 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
         <div className='projectItemContainer'>
             <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='projectInfoContainer d-flex flex-column-reverse'>
                 <div className={`p-2 projectInfo ${hovered ? 'isHover' : ''}`}>
-                    <a className='linkProject d-flex justify-content-center align-items-center' target='_blank' href={urlGit}><BsGithub  className='projectOpc' /></a>
-                    <a className='linkProject d-flex justify-content-center align-items-center' target='_blank' href={urlPage}><BsGlobe2  className='projectOpc' /></a>
+                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlGit}><BsGithub  className='projectOpc' /></a>
+                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlPage}><BsGlobe2  className='projectOpc' /></a>
                     <BsInfoCircle data-bs-toggle='modal' data-bs-target={`#${id}`} className='linkProject projectOpc' />
                 </div>
                 <img loading='lazy' className='projectImg' src={img} alt="project" />
@@ -85,7 +85,6 @@ const ProjectsWebDevelopment = () => {
             <ProjectItem urlPage={'https://calculator-react-lorenzo.netlify.app'} urlGit={'https://github.com/lorenzoJimenez301/Calculadora-React.git'} id={'calcu'} img={imgCalcu} />
             <ProjectItem urlPage={'https://contador-clicks-lorenzo.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Contador-Clicks.git'} id={'cont'} img={imgContador} />
             <ProjectItem urlPage={'https://gestor-tareas-lorenzo.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Gestor-Tareas.git'} id={'todo'} img={imgToDo} />
-            <ProjectItem id={'php'} img={imgPhp} />
             <ProjectItem urlPage={'https://fake-store-api-lorenzo-jimenez.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Fake-Store-Api.git'} id={'fakeStore'} img={fakeStore} />
         </>
     );
