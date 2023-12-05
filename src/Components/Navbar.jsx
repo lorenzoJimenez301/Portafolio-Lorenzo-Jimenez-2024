@@ -43,6 +43,8 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--pielDesvanecido', '#3f3f3fa9');
             root.style.setProperty('--pielEspecial', grisPrincipal);
             root.style.setProperty('--negro', '#ffffff');
+            root.style.setProperty('--negroOpa', '#ffffffde');
+            root.style.setProperty('--blancoLink', '#000');
             root.style.setProperty('--grisPrincipal', pielPrincipal);
             onImagenCambiada(srcImagen1);
             changeBackgroundImage(fondoGris);
@@ -52,6 +54,8 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--piel', pielPrincipal);
             root.style.setProperty('--pielDesvanecido', null);
             root.style.setProperty('--negro', '#000000');
+            root.style.setProperty('--negroOpa', '#000000de');
+            root.style.setProperty('--blancoLink', '#fff');
             root.style.setProperty('--grisPrincipal', grisPrincipal);
             onImagenCambiada(srcImagen2);
             changeBackgroundImage(fondoPiel);

@@ -4,7 +4,9 @@
     --piel: #F6DEBF;
     --pielDesvanecido: #f6debfa8;
     --negro: #000000;
+    --negroOpa: #000000de;
     --blanco: #ffffff;
+    --blancoLink: #fff;
     --grisPrincipal: #1D1D1D;
     --rojoPrincipal: #EE1C25;
     --grisNubes: #3F3F3F;
@@ -16,7 +18,6 @@
 * {
     user-select: none;
 }
-
 html,
 body {
     overflow-x: hidden;
@@ -32,11 +33,7 @@ body {
 
 }
 
-.App {
-    flex: 1;
-}
-
-a{
-    color: transparent;
-    text-decoration: none !important;
+.modal-open{
+    padding: 0 !important;
+    margin: 0 !important;
 }

@@ -10,6 +10,10 @@
     padding: 0vw 0 3vw 0;
 }
 
+.grapichContainer {
+    height: auto;
+}
+
 .projectTitle {
     color: var(--negro);
     font-family: var(--mont);
@@ -21,6 +25,7 @@
 }
 
 .projectSubTitle {
+    width: 100vw;
     color: var(--grisPrincipal);
     font-family: var(--lato);
     font-weight: normal;
@@ -49,54 +54,54 @@
     border-bottom: .2vw solid var(--rojoPrincipal);
 }
 
-.projectImg {
-    width: 100%;
+.projectInfoContainer {
     height: auto;
-    max-width: 100%;
+    position: relative;
+}
+
+.projectImg {
+    height: 15vw;
     border: .1vw solid var(--negro);
 }
 
 .projectsContainerGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1vw;
     padding: 5vw 0vw;
-}
-
-.projectInfoContainer {
-    position: relative;
 }
 
 .projectInfo {
     color: var(--blanco);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    height: 0;
+    height:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     position: absolute;
-    font-size: 2.5vw;
     bottom: 0px;
     transition: height .2s ease, clip-path .2s ease;
     border: .1vw solid var(--negro);
     gap: 5vw;
-    background-color: rgba(0, 0, 0, 0.644);
+    background-color: var(--negroOpa);
 }
 
 .isHover {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     height: 100%;
     transition: height .2s ease, clip-path .2s ease;
-    background-color: rgba(0, 0, 0, 0.904);
+    background-color: var(--negroOpa);
 }
 
-.projectOpc {
-    cursor: pointer;
+.linkProject{
+    font-size: 2.5vw;
+    color: var(--blancoLink );
 }
 
-.projectOpc:hover {
+.linkProject:hover {
     color: var(--rojoPrincipal);
+    cursor: pointer;
 }
 
 .down {
@@ -109,19 +114,11 @@
     color: var(--blanco);
 }
 
-.modal {
-    transform: translate3d(0, 0, 0) !important;
-}
-
 .modelProjectsContent {
     border-radius: 0 !important;
     height: auto !important;
-    width: 30vw !important;
+    width: 40vw !important;
     min-width: 30vw !important;
-}
-
-.modal-dialog {
-    max-width: 100% !important;
 }
 
 .modal-body-projects {
@@ -129,13 +126,12 @@
 }
 
 .imgTecnoModal {
-    height: 2vw;
+    height: 2.5vw;
 }
 
 .imgModalProjects {
-    height: 16vw;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
 }
 
 .modalFooter {
@@ -164,6 +160,10 @@
         padding: 0 8vw 0 8vw;
     }
 
+    .projectInfoContainer {
+        height: auto;
+    }
+
     .projectsContainer {
         padding: 10vw 8vw 0 8vw;
     }
@@ -187,12 +187,6 @@
     .projectSubTitle {
         font-size: 8vw;
         line-height: 3.5vw;
-    }
-
-    .imgModalProjects {
-        height: 40vw;
-        width: 100%;
-        object-fit: cover;
     }
 
     .imgTecnoModal {
@@ -240,5 +234,9 @@
         grid-gap: 10vw;
         padding: 10vw 3vw 10vw 3vw;
         place-content: center;
+    }
+
+    .grapichContainer {
+        height: 100vh;
     }
 }
