@@ -45,8 +45,8 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
         <div className='projectItemContainer'>
             <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='projectInfoContainer d-flex flex-column-reverse'>
                 <div className={`p-2 projectInfo ${hovered ? 'isHover' : ''}`}>
-                    <a className='linkProject d-flex justify-content-center align-items-center' target='_blank' rel='noreferrer' href={urlGit}><BsGithub className='projectOpc' /></a>
-                    <a className='linkProject d-flex justify-content-center align-items-center' target='_blank' rel='noreferrer' href={urlPage}><BsGlobe2 className='projectOpc' /></a>
+                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlGit}><BsGithub  className='projectOpc' /></a>
+                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlPage}><BsGlobe2  className='projectOpc' /></a>
                     <BsInfoCircle data-bs-toggle='modal' data-bs-target={`#${id}`} className='linkProject projectOpc' />
                 </div>
                 {isloading ? (
