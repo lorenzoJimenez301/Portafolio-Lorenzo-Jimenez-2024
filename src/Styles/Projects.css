@@ -22,6 +22,7 @@
     line-height: 6vw;
     text-indent: -.6vw;
     letter-spacing: -0.1vw;
+    margin: 0;
 }
 
 .projectSubTitle {
@@ -32,6 +33,7 @@
     font-size: 3vw;
     line-height: 3.5vw;
     text-indent: -0.4vw;
+    min-width: 100px;
 }
 
 .projectsCate {

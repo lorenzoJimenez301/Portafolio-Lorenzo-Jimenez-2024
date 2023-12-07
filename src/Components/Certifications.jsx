@@ -20,6 +20,7 @@ const MySlider = () => {
         <Swiper
             spaceBetween={30}
             effect={'fade'}
+            lazy={true}
             modules={[EffectFade, Navigation, Autoplay]}
             loop={true}
             navigation={{
@@ -32,19 +33,19 @@ const MySlider = () => {
             className='carrusel m-0 p-0'
         >
             <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img' loading='lazy' className='imgCarrusel' src={cert1} />
+                <img alt='img' loading='eager' className='imgCarrusel' src={cert1} />
                 <h3 className='titleCerti'>Responsive Web Design</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img' loading='lazy' className='imgCarrusel' src={cert2} />
+                <img alt='img' loading='eager' className='imgCarrusel' src={cert2} />
                 <h3 className='titleCerti'>Front End Developer</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img' loading='lazy' className='imgCarrusel' src={cert3} />
+                <img alt='img' loading='eager' className='imgCarrusel' src={cert3} />
                 <h3 className='titleCerti'>Soft Skills</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)' }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img alt='img' loading='lazy' className='imgCarrusel' src={cert4} />
+                <img alt='img' loading='eager' className='imgCarrusel' src={cert4} />
                 <h3 className='titleCerti'>High school</h3>
             </SwiperSlide>
         </Swiper>

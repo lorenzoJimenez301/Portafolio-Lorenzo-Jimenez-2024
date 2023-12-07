@@ -1,8 +1,10 @@
 footer {
     position: relative;
-    background-color: #000000;
+    background-color: #080808;
     color: var(--blanco);
 }
+
+
 
 .containerLinkFooter {
     padding: 2vw;

@@ -105,7 +105,7 @@
 
 .inter {
     height: 20vw;
-    background-color: #000000;
+    background-color: #080808;
 }
 
 .inter>h2 {
@@ -139,6 +139,7 @@
     }
 
     .titleContainer {
+        height: max-content;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -160,13 +161,15 @@
     }
 
     .title {
+        display: block;
         font-size: 8vw;
         text-align: center;
         padding: 0;
         margin: 0;
         letter-spacing: -.5vw;
-        line-height: 10vw;
+        line-height: 1vw;
         gap: 10vw;
+        margin-bottom: 5vw;
     }
 
     .subTitle {

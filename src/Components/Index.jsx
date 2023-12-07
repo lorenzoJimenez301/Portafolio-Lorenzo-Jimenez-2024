@@ -22,7 +22,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen,
     <section style={{ backgroundImage: `url(${backgroundImage})` }} className="indexContainer d-flex align-items-end justify-content-evenly">
       <div className="heroContainer">
         <div className="titleContainer">
-          <h1 className="title m-0 d-flex flex-column d-lg-inline">
+          <h1 className="title d-flex flex-column d-lg-inline">
             Hi!, I'm{' '}
             <Link className="text-decoration-none Lorenzo" to={isMobile ? '/AboutMe' : ''} id="Lorenzo">
               Lorenzo
