@@ -60,7 +60,7 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
                         colors={['#000']}
                     />
                 ) : (
-                    <img className='projectImg' src={img} alt="project" />
+                    <img loading='lazy' className='projectImg' src={img} alt="project" />
                 )}
             </div>
         </div>
