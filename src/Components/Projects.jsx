@@ -19,6 +19,7 @@ import imgCalcu from '../Images/Projects/Calcu.png';
 import imgContador from '../Images/Projects/Contador.png';
 import imgToDo from '../Images/Projects/TODO.png';
 import imgPhp from '../Images/Projects/php.png';
+import fakeBlog from '../Images/Projects/fakeBlog.png';
 import { ColorRing } from 'react-loader-spinner';
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
@@ -108,6 +109,7 @@ const ProjectsWebDevelopment = () => {
             <ProjectItem urlPage={'https://contador-clicks-lorenzo.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Contador-Clicks.git'} id={'cont'} img={imgContador} />
             <ProjectItem urlPage={'https://gestor-tareas-lorenzo.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Gestor-Tareas.git'} id={'todo'} img={imgToDo} />
             <ProjectItem urlPage={'https://fake-store-api-lorenzo-jimenez.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Fake-Store-Api.git'} id={'fakeStore'} img={fakeStore} />
+            <ProjectItem urlPage={'https://github.com/lorenzoJimenez301/Personal-Blog-API'} urlGit={'https://github.com/lorenzoJimenez301/Personal-Blog-API'} id={'fakeBlog'} img={fakeBlog} />
         </>
     );
 }
@@ -146,6 +148,7 @@ export const Projects = () => {
                     <ModalProject id={'todo'} img={imgToDo} desc={'A task manager made with React is a web application that uses the React JavaScript library to help users dynamically organize, create, delete, and edit tasks.'} title={'React "Thing to do"'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
                     <ModalProject id={'php'} img={imgPhp} desc={'A CRUD (Create, Read, Update, Delete) in PHP is a set of basic operations to manage data in a database.'} title={'PHP CRUD'} tecno1={Html} tecno2={Css} tecno3={Bootstrap} tecno4={Php} />
                     <ModalProject id={'fakeStore'} img={fakeStore} desc={''} title={'Fake-Store-API'} tecno1={Html} tecno2={apiLogo} tecno3={Bootstrap} tecno4={react} />
+                    <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Store-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
                 </div>
             </div>
         </section>
