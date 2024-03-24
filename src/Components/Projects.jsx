@@ -148,7 +148,7 @@ export const Projects = () => {
                     <ModalProject id={'todo'} img={imgToDo} desc={'A task manager made with React is a web application that uses the React JavaScript library to help users dynamically organize, create, delete, and edit tasks.'} title={'React "Thing to do"'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
                     <ModalProject id={'php'} img={imgPhp} desc={'A CRUD (Create, Read, Update, Delete) in PHP is a set of basic operations to manage data in a database.'} title={'PHP CRUD'} tecno1={Html} tecno2={Css} tecno3={Bootstrap} tecno4={Php} />
                     <ModalProject id={'fakeStore'} img={fakeStore} desc={''} title={'Fake-Store-API'} tecno1={Html} tecno2={apiLogo} tecno3={Bootstrap} tecno4={react} />
-                    <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Store-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
+                    <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Blog-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
                 </div>
             </div>
         </section>
