@@ -122,8 +122,31 @@ const ProjectsWebDevelopment = () => {
 }
 
 const GraphicDesignItem = ({url}) =>{
+    const [isloading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const imageLoader = new Image();
+        imageLoader.src = url;
+        imageLoader.onload = () => {
+            setIsLoading(false);
+        };
+    }, [url]);
     return(
-        <img className='gdImg' src={url} alt='project' />
+        <>
+            {isloading ? (
+            <ColorRing
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper w-100"
+                colors={['#000']}
+            />
+        ) : (
+            <img loading='lazy' className='gdImg' src={url} alt="project" />
+        )}
+        </>
     );
 }
 
