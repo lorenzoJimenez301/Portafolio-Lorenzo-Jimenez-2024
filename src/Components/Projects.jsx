@@ -20,6 +20,13 @@ import imgContador from '../Images/Projects/Contador.png';
 import imgToDo from '../Images/Projects/TODO.png';
 import imgPhp from '../Images/Projects/php.png';
 import fakeBlog from '../Images/Projects/fakeBlog.png';
+import gd1 from '../Images/GraphicProjects/398594924_213675705086097_4875625992226101580_n.jpg';
+import gd2 from '../Images/GraphicProjects/Antonios_s Solutions fondo blanco.png';
+import gd3 from '../Images/GraphicProjects/Cap White.png';
+import gd4 from '../Images/GraphicProjects/Men Hoodies Mockup, Front And Back View(1).png';
+import gd5 from '../Images/GraphicProjects/Screenshot 2024-03-21 111638.png';
+import gd6 from '../Images/GraphicProjects/Skullrai.png';
+import gd7 from '../Images/GraphicProjects/Soda Cano Logotipo Color Reforzed.png';
 import { ColorRing } from 'react-loader-spinner';
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
@@ -114,10 +121,22 @@ const ProjectsWebDevelopment = () => {
     );
 }
 
+const GraphicDesignItem = ({url}) =>{
+    return(
+        <img className='gdImg' src={url} alt='project' />
+    );
+}
+
 const ProjectsGrapich = () => {
     return (
         <div className='grapichContainer'>
-            <h4 style={{ color: 'var(--negro)' }}>Coming Soon! :3</h4>
+            <GraphicDesignItem url={gd1} />
+            <GraphicDesignItem url={gd2} />
+            <GraphicDesignItem url={gd5} />
+            <GraphicDesignItem url={gd3} />
+            <GraphicDesignItem url={gd4} />
+            <GraphicDesignItem url={gd6} />
+            <GraphicDesignItem url={gd7} />
         </div>
     );
 }

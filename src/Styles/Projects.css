@@ -10,10 +10,6 @@
     padding: 0vw 0 3vw 0;
 }
 
-.grapichContainer {
-    height: auto;
-}
-
 .projectTitle {
     color: var(--negro);
     font-family: var(--mont);
@@ -69,8 +65,10 @@
 .projectsContainerGrid {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    grid-gap: 1vw;
+    gap: 1vw;
     padding: 5vw 0vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .projectInfo {
@@ -146,6 +144,19 @@
 
 .textModalContainer {
     padding: 0;
+}
+
+.grapichContainer {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 2vw;
+    justify-items: center;
+    align-content: center;
+}
+
+.gdImg{
+    height: 19vw;
 }
 
 @media (max-width: 992px) {
@@ -239,6 +250,12 @@
     }
 
     .grapichContainer {
-        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 10vw;
+        place-content: center;
+    }
+    .gdImg{
+        height: 55vw;
     }
 }
