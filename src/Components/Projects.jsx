@@ -52,7 +52,7 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
     return (
         <div className='projectItemContainer'>
             <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='projectInfoContainer d-flex flex-column-reverse'>
-                <div className={`p-2 projectInfo ${hovered ? 'isHover' : ''}`}>
+                <div className={`p-2 projectInfo ${hovered ? 'isHover' : ''} ${isloading ? 'd-none' : ''}`}>
                     <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlGit}><BsGithub  className='projectOpc' /></a>
                     <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlPage}><BsGlobe2  className='projectOpc' /></a>
                     <BsInfoCircle data-bs-toggle='modal' data-bs-target={`#${id}`} className='linkProject projectOpc' />
@@ -68,7 +68,7 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
                         colors={['#000']}
                     />
                 ) : (
-                    <img loading='lazy' className='projectImg' src={img} alt="project" />
+                    <img loading='lazy' className={`projectImg` } src={img} alt="project" />
                 )}
             </div>
         </div>
@@ -176,12 +176,12 @@ export const Projects = () => {
             <div className='projectsTitleContainer'>
                 <h2 className='projectTitle p-0'>Projects</h2>
                 <h3 className='projectSubTitle p-0 m-0'>Personal & Professional</h3>
-            </div>
-            <div className='projectsContainer h-100'>
                 <div className='projectsCate d-flex flex-row justify-content-start align-items-center'>
                     <button className={`btnProjects ${!isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(false)}>Web Development</button>
                     <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
                 </div>
+            </div>
+            <div className='projectsContainer h-100'>
                 <div className='projectsContainerGrid'>
                     {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
                     <ModalProject id={'multi'} img={multityr} desc={'Main page of the cleaning division, in the company MultiserviciosTYR.'} title={'Web Page MultiserviciosTYR'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Bootstrap} />
