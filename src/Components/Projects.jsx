@@ -72,7 +72,7 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
                         colors={['#000']}
                     />
                 ) : (
-                    <img loading='lazy' className={`projectImg` } src={img} alt="project" />
+                    <img className={`projectImg` } src={img} alt="project" />
                 )}
             </div>
         </div>
@@ -99,10 +99,10 @@ const ModalProject = ({ id, title, img, tecno1, tecno2, tecno3, tecno4 }) => {
                             <h3 style={{ fontFamily: 'var(--mont)', fontSize: `${isMobile ? '3.5vw' : '1.5vw'}` }} className='m-0 fw-bold text-center'>Tecnologies:</h3>
                         </div>
                         <div style={{ padding: '.5vw', gap: '1vw' }} className='w-50 m-0 d-flex justify-content-center'>
-                            <img loading='lazy' className='imgTecnoModal' src={tecno1} alt="tecno" />
-                            <img loading='lazy' className='imgTecnoModal' src={tecno2} alt="tecno" />
-                            <img loading='lazy' className='imgTecnoModal' src={tecno3} alt="tecno" />
-                            <img loading='lazy' className='imgTecnoModal' src={tecno4} alt="tecno" />
+                            <img loading='eager' className='imgTecnoModal' src={tecno1} alt="tecno" />
+                            <img loading='eager' className='imgTecnoModal' src={tecno2} alt="tecno" />
+                            <img loading='eager' className='imgTecnoModal' src={tecno3} alt="tecno" />
+                            <img loading='eager' className='imgTecnoModal' src={tecno4} alt="tecno" />
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@ const GraphicDesignItem = ({url}) =>{
                 colors={['#000']}
             />
         ) : (
-            <img loading='lazy' className='gdImg' src={url} alt="project" />
+            <img className='gdImg' src={url} alt="project" />
         )}
         </>
     );
