@@ -27,6 +27,10 @@ import gd4 from '../Images/GraphicProjects/Men Hoodies Mockup, Front And Back Vi
 import gd5 from '../Images/GraphicProjects/Screenshot 2024-03-21 111638.png';
 import gd6 from '../Images/GraphicProjects/Skullrai.png';
 import gd7 from '../Images/GraphicProjects/Soda Cano Logotipo Color Reforzed.png';
+import gd8 from '../Images/GraphicProjects/Isotipo Cai-man.png';
+import gd9 from '../Images/GraphicProjects/Isotipo Cai-man 2.png';
+import gd10 from '../Images/GraphicProjects/Isotipo Cai-man 3.png';
+import gd11 from '../Images/GraphicProjects/Chocomenta.png';
 import { ColorRing } from 'react-loader-spinner';
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
@@ -160,6 +164,10 @@ const ProjectsGrapich = () => {
             <GraphicDesignItem url={gd4} />
             <GraphicDesignItem url={gd6} />
             <GraphicDesignItem url={gd7} />
+            <GraphicDesignItem url={gd8} />
+            <GraphicDesignItem url={gd9} />
+            <GraphicDesignItem url={gd10} />
+            <GraphicDesignItem url={gd11} />
         </div>
     );
 }
