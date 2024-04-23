@@ -62,17 +62,19 @@
 }
 
 .projectImg {
-    height: 15vw;
+    height: 14vw;
+    width: 100%;
     border: .1vw solid var(--negro);
 }
 
 .projectsContainerGrid {
     display: grid;
     grid-template-columns: repeat(3, 30vw);
-    gap: 1vw;
-    padding: 5vw 0vw;
+    gap: 3vw;
+    padding: 0;
     justify-content: center;
     align-self: center;
+    align-items: center;
     width: 100%;
 }
 

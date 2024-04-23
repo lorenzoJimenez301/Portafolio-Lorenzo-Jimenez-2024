@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
@@ -31,6 +31,7 @@ import gd8 from '../Images/GraphicProjects/Isotipo Cai-man.png';
 import gd9 from '../Images/GraphicProjects/Isotipo Cai-man 2.png';
 import gd10 from '../Images/GraphicProjects/Isotipo Cai-man 3.png';
 import gd11 from '../Images/GraphicProjects/Chocomenta.png';
+import gd12 from '../Images/GraphicProjects/Libro-de-Marca-Antonios-Solutions.jpg';
 import { ColorRing } from 'react-loader-spinner';
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
@@ -57,8 +58,8 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
         <div className='projectItemContainer'>
             <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='projectInfoContainer d-flex flex-column-reverse'>
                 <div className={`p-2 projectInfo ${hovered ? 'isHover' : ''} ${isloading ? 'd-none' : ''}`}>
-                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlGit}><BsGithub  className='projectOpc' /></a>
-                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlPage}><BsGlobe2  className='projectOpc' /></a>
+                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlGit}><BsGithub className='projectOpc' /></a>
+                    <a className='linkProject d-flex justify-content-center align-items-center' rel='noreferrer' target='_blank' href={urlPage}><BsGlobe2 className='projectOpc' /></a>
                     <BsInfoCircle data-bs-toggle='modal' data-bs-target={`#${id}`} className='linkProject projectOpc' />
                 </div>
                 {isloading ? (
@@ -72,7 +73,7 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
                         colors={['#000']}
                     />
                 ) : (
-                    <img className={`projectImg` } src={img} alt="project" />
+                    <img className={`projectImg`} src={img} alt="project" />
                 )}
             </div>
         </div>
@@ -125,7 +126,7 @@ const ProjectsWebDevelopment = () => {
     );
 }
 
-const GraphicDesignItem = ({url}) =>{
+const GraphicDesignItem = ({ url }) => {
     const [isloading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -135,21 +136,21 @@ const GraphicDesignItem = ({url}) =>{
             setIsLoading(false);
         };
     }, [url]);
-    return(
+    return (
         <>
             {isloading ? (
-            <ColorRing
-                visible={true}
-                height="80"
-                width="80"
-                ariaLabel="blocks-loading"
-                wrapperStyle={{}}
-                wrapperClass="blocks-wrapper w-100"
-                colors={['#000']}
-            />
-        ) : (
-            <img className='gdImg' src={url} alt="project" />
-        )}
+                <ColorRing
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="blocks-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="blocks-wrapper w-100"
+                    colors={['#000']}
+                />
+            ) : (
+                <img className='gdImg' src={url} alt="project" />
+            )}
         </>
     );
 }
@@ -168,6 +169,8 @@ const ProjectsGrapich = () => {
             <GraphicDesignItem url={gd9} />
             <GraphicDesignItem url={gd10} />
             <GraphicDesignItem url={gd11} />
+            <GraphicDesignItem url={gd12} />
+
         </div>
     );
 }
@@ -189,17 +192,15 @@ export const Projects = () => {
                     <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
                 </div>
             </div>
-            <div className='projectsContainer h-100'>
-                <div className='projectsContainerGrid'>
-                    {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
-                    <ModalProject id={'multi'} img={multityr} desc={'Main page of the cleaning division, in the company MultiserviciosTYR.'} title={'Web Page MultiserviciosTYR'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Bootstrap} />
-                    <ModalProject id={'calcu'} img={imgCalcu} desc={'A calculator made with React is an interactive web application that uses the React JavaScript library to create an intuitive and functional user interface for performing basic mathematical operations.'} title={'React Calculator'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
-                    <ModalProject id={'cont'} img={imgContador} desc={'A counter made with React is a UI component that uses the React JavaScript library to create a web application that displays a number and allows you to increase or decrease it with increment and decrement buttons.'} title={'React Counter'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
-                    <ModalProject id={'todo'} img={imgToDo} desc={'A task manager made with React is a web application that uses the React JavaScript library to help users dynamically organize, create, delete, and edit tasks.'} title={'React "Thing to do"'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
-                    <ModalProject id={'php'} img={imgPhp} desc={'A CRUD (Create, Read, Update, Delete) in PHP is a set of basic operations to manage data in a database.'} title={'PHP CRUD'} tecno1={Html} tecno2={Css} tecno3={Bootstrap} tecno4={Php} />
-                    <ModalProject id={'fakeStore'} img={fakeStore} desc={''} title={'Fake-Store-API'} tecno1={Html} tecno2={apiLogo} tecno3={Bootstrap} tecno4={react} />
-                    <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Blog-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
-                </div>
+            <div className='projectsContainerGrid'>
+                {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
+                <ModalProject id={'multi'} img={multityr} desc={'Main page of the cleaning division, in the company MultiserviciosTYR.'} title={'Web Page MultiserviciosTYR'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Bootstrap} />
+                <ModalProject id={'calcu'} img={imgCalcu} desc={'A calculator made with React is an interactive web application that uses the React JavaScript library to create an intuitive and functional user interface for performing basic mathematical operations.'} title={'React Calculator'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
+                <ModalProject id={'cont'} img={imgContador} desc={'A counter made with React is a UI component that uses the React JavaScript library to create a web application that displays a number and allows you to increase or decrease it with increment and decrement buttons.'} title={'React Counter'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
+                <ModalProject id={'todo'} img={imgToDo} desc={'A task manager made with React is a web application that uses the React JavaScript library to help users dynamically organize, create, delete, and edit tasks.'} title={'React "Thing to do"'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
+                <ModalProject id={'php'} img={imgPhp} desc={'A CRUD (Create, Read, Update, Delete) in PHP is a set of basic operations to manage data in a database.'} title={'PHP CRUD'} tecno1={Html} tecno2={Css} tecno3={Bootstrap} tecno4={Php} />
+                <ModalProject id={'fakeStore'} img={fakeStore} desc={''} title={'Fake-Store-API'} tecno1={Html} tecno2={apiLogo} tecno3={Bootstrap} tecno4={react} />
+                <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Blog-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
             </div>
         </section>
     );
