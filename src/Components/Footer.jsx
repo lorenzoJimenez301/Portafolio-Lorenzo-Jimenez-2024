@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Footer.css';
 import Logo from '../Images/LogoHD.png';
-import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp, FaGithub, FaBehanceSquare } from 'react-icons/fa';
 
 export const Footer = () => {
   const year = new Date().getFullYear();
@@ -28,6 +28,9 @@ export const Footer = () => {
           </a>
           <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://github.com/lorenzoJimenez301'>
             <FaGithub />
+          </a>
+          <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://www.behance.net/lorenzojimenez4'>
+            <FaBehanceSquare />
           </a>
           <hr className='hrFooter hr2' />
         </div>

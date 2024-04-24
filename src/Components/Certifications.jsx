@@ -25,7 +25,6 @@ const MySlider = () => {
         <Swiper
             spaceBetween={30}
             effect={'fade'}
-            lazy={true}
             modules={[EffectFade, Navigation, Autoplay]}
             loop={true}
             navigation={{
