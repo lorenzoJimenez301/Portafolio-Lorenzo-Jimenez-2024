@@ -78,6 +78,14 @@
     width: 100%;
 }
 
+.graphicItems{
+    height: 14vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .projectInfo {
     color: var(--blanco);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
@@ -164,6 +172,23 @@
 
 .gdImg{
     height: 19vw;
+}
+
+.btnBehance{
+    display: flex;
+    width: 9em;
+    height: 2.5vw;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: var(--rojoPrincipal);
+    border: none;
+    color: var(--blanco);
+    font-family: var(--lato);
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 1vw 0 0 0;
+    padding: 0 .4vw;
 }
 
 @media (max-width: 992px) {

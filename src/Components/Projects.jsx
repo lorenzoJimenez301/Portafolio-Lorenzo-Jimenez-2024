@@ -31,8 +31,9 @@ import gd8 from '../Images/GraphicProjects/Isotipo Cai-man.png';
 import gd9 from '../Images/GraphicProjects/Isotipo Cai-man 2.png';
 import gd10 from '../Images/GraphicProjects/Isotipo Cai-man 3.png';
 import gd11 from '../Images/GraphicProjects/Chocomenta.png';
-import gd12 from '../Images/GraphicProjects/Libro-de-Marca-Antonios-Solutions.jpg';
 import { ColorRing } from 'react-loader-spinner';
+import { GiSamuraiHelmet } from 'react-icons/gi';
+import { motion } from 'framer-motion';
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
     const [hovered, setHovered] = useState(false);
@@ -137,7 +138,7 @@ const GraphicDesignItem = ({ url }) => {
         };
     }, [url]);
     return (
-        <>
+        <div className={`${isloading ? 'graphicItems' : ''}`}>
             {isloading ? (
                 <ColorRing
                     visible={true}
@@ -151,7 +152,7 @@ const GraphicDesignItem = ({ url }) => {
             ) : (
                 <img className='gdImg' src={url} alt="project" />
             )}
-        </>
+        </div>
     );
 }
 
@@ -169,7 +170,6 @@ const ProjectsGrapich = () => {
             <GraphicDesignItem url={gd9} />
             <GraphicDesignItem url={gd10} />
             <GraphicDesignItem url={gd11} />
-            <GraphicDesignItem url={gd12} />
 
         </div>
     );
@@ -201,6 +201,18 @@ export const Projects = () => {
                 <ModalProject id={'php'} img={imgPhp} desc={'A CRUD (Create, Read, Update, Delete) in PHP is a set of basic operations to manage data in a database.'} title={'PHP CRUD'} tecno1={Html} tecno2={Css} tecno3={Bootstrap} tecno4={Php} />
                 <ModalProject id={'fakeStore'} img={fakeStore} desc={''} title={'Fake-Store-API'} tecno1={Html} tecno2={apiLogo} tecno3={Bootstrap} tecno4={react} />
                 <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Blog-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
+            </div>
+            <div className='w-100 d-flex justify-content-center d-none d-lg-flex' style={{padding: '5vw'}}>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="btnBehance text-decoration-none m-0"
+              href='https://www.behance.net/lorenzojimenez4'
+              target='_blank'
+            >
+              More
+              <GiSamuraiHelmet className="SH" />
+            </motion.a>
             </div>
         </section>
     );
