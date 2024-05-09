@@ -206,7 +206,7 @@ export const Projects = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="btnBehance text-decoration-none m-0"
+              className={`btnBehance text-decoration-none m-0 ${isGraphicDesign ? 'd-flex' : 'd-none'}`}
               href='https://www.behance.net/lorenzojimenez4'
               target='_blank'
             >

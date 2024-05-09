@@ -2,21 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GiSamuraiHelmet } from 'react-icons/gi';
 import { useImage } from 'react-image';
-import { Typed } from 'react-typed';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import '../Styles/Index.css';
 import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
+import Typewriter from 'typewriter-effect';
 
 export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen, back }) => {
   const { src: srcImagenMostrada } = useImage({
     srcList: mostrarPrimeraImagen ? imagenURL1 : imagenURL2,
   });
 
-  const words = ['Developer', 'Designer'];
   const isMobile = useMediaQuery({ maxWidth: 992 });
   const { backgroundImage } = useContext(ThemeContext);
+  const words = ['Developer', 'Graphic Designer'];
 
   return (
     <section style={{ backgroundImage: `url(${backgroundImage})` }} className="indexContainer d-flex align-items-end justify-content-evenly">
@@ -28,19 +28,22 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen,
               Lorenzo
             </Link>
           </h1>
-          <h2 className="subTitle m-0 p-0">
-            Programmer &{' '}
-            <Typed
-              className="letterType"
-              strings={words}
-              typeSpeed={100}
-              backSpeed={100}
-              backDelay={3000}
-              loop
-              smartBackspace
-              shuffle={false}
-              showCursor
-              cursorChar="|"
+          <h2 className="subTitle m-0 p-0 d-flex gap-3">
+            <span style={{color:'var(--grisPrincipal)'}}>Programmer &{' '}</span>
+            <Typewriter
+              options={{
+                strings: words,
+                autoStart: true,
+                loop: true,
+              }}
+              onInit={typewriter => {
+                typewriter
+                  .typeString('Developer Web')
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString('Graphic Designer')
+                  .start();
+              }}
             />
           </h2>
           <Link className="text-decoration-none" to="/AboutMe">

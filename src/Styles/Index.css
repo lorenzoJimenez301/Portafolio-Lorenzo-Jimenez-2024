@@ -49,7 +49,7 @@
 }
 
 .subTitle {
-    color: var(--grisPrincipal);
+    color: var(--rojoPrincipal);
     font-family: var(--lato);
     font-weight: normal;
     font-size: 2.5vw;
@@ -124,6 +124,15 @@
     margin-left: 1vw;
 }
 
+.typewriter-container{
+    color: var(--rojoPrincipal);
+}
+
+.typewriter-cursor{
+    color: var(--rojoPrincipal);
+
+}
+
 @media (max-width: 992px) {
     .indexContainer {
         height: 100%;
@@ -173,6 +182,7 @@
     }
 
     .subTitle {
+        color: var(--rojoPrincipal);
         line-height: 11vw;
         font-size: 7vw;
     }
