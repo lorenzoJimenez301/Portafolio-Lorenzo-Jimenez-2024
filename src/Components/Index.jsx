@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GiSamuraiHelmet } from 'react-icons/gi';
 import { useImage } from 'react-image';
-import Typed from 'react-typed';
+import { Typed } from 'react-typed';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import '../Styles/Index.css';
