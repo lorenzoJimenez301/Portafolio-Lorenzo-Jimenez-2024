@@ -28,7 +28,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen,
               Lorenzo
             </Link>
           </h1>
-          <h2 className="subTitle m-0 p-0 d-flex gap-3">
+          <h2 className="subTitle m-0 p-0 d-flex gap-2 gap-lg-3 text-center">
             <span style={{color:'var(--grisPrincipal)'}}>Programmer &{' '}</span>
             <Typewriter
               options={{
