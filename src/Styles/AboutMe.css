@@ -56,7 +56,7 @@
     font-family: var(--mont);
     padding: 2vw;
     border: 1px solid var(--negro);
-    background-color: var(--pielDesvanecido); 
+    background-color: var(--pielDesvanecido);
 }
 
 .skillsContainerTitleContainer {
@@ -121,6 +121,27 @@
 .my-node-exit-active {
     opacity: 1;
     transition: opacity 500ms;
+}
+
+.btnAnto{
+    display: flex;
+    width: max-content;
+    height: 3.4vw;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: var(--rojoPrincipal);
+    border: none;
+    color: var(--blanco);
+    font-family: var(--lato);
+    font-size: .9vw;
+    font-weight: 700;
+    margin: 1vw 0 0 0;
+    padding: 0vw .6vw;
+}
+.arrowRight{
+    font-size: .9vw;
+    margin: 0 0 0 .5vw;
 }
 
 @media (max-width: 992px) {
@@ -192,6 +213,7 @@
 
 
     }
+
     .btnControlSkills {
         font-size: 4vw;
     }

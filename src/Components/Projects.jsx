@@ -32,7 +32,7 @@ import gd9 from '../Images/GraphicProjects/Isotipo Cai-man 2.png';
 import gd10 from '../Images/GraphicProjects/Isotipo Cai-man 3.png';
 import gd11 from '../Images/GraphicProjects/Chocomenta.png';
 import { ColorRing } from 'react-loader-spinner';
-import { GiSamuraiHelmet } from 'react-icons/gi';
+import { FaBehanceSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
@@ -206,12 +206,12 @@ export const Projects = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className={`btnBehance text-decoration-none m-0 ${isGraphicDesign ? 'd-flex' : 'd-none'}`}
+              className={`btnBehance text-decoration-none m-0 justify-content-center align-items-center ${isGraphicDesign ? 'd-flex' : 'd-none'}`}
               href='https://www.behance.net/lorenzojimenez4'
               target='_blank'
             >
               More
-              <GiSamuraiHelmet className="SH" />
+              <FaBehanceSquare style={{margin: '0 0 0 .5vw', padding: '0'}} />
             </motion.a>
             </div>
         </section>
