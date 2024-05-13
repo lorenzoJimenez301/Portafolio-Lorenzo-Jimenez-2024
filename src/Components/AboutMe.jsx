@@ -7,11 +7,15 @@ import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
 import { FaChevronRight } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 export const AboutMe = () => {
     const [isGraphicDesign, setIsGraphicDesign] = useState(false);
     const [isFrontEnd, setIsFrontEnd] = useState(true);
     const transitionRef = useRef(null);
+    const isMobile = useMediaQuery({ maxWidth: 992 });
+
+
 
     const handleChange = (isGraphic) => {
         setIsGraphicDesign(isGraphic);
@@ -37,7 +41,7 @@ export const AboutMe = () => {
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className={`btnAnto text-decoration-none`}
+                        className={`btnAnto text-decoration-none ${isMobile ? 'd-none' : 'd-flex'}`}
                         href='https://www.facebook.com/profile.php?id=100093310074051'
                         target='_blank'
                     >
