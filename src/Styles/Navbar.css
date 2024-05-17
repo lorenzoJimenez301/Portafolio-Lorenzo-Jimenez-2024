@@ -52,10 +52,10 @@
 }
 
 .navItem {
-    font-family: var(--mont);
+    font-family: var(--lato);
     font-size: .9vw;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     min-width: max-content;
     color: var(--negro);
 }

@@ -1,5 +1,5 @@
 import React, { createContext, useState, memo, useEffect } from 'react';
-import imgInicial from '../Images/FondoPiel.png';
+import imgInicial from '../Images/FondoPiel.jpg';
 
 export const ThemeContext = createContext();
 

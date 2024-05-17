@@ -12,8 +12,8 @@ import samuraiBlanco from '../Images/Samurai_White.png';
 import samuraiNegro from '../Images/Samurai_Black.png';
 import { useImage } from 'react-image';
 import { ThemeContext } from './ThemeContext';
-import fondoGris from '../Images/FondoGris.png';
-import fondoPiel from '../Images/FondoPiel.png';
+import fondoGris from '../Images/FondoGris.jpg';
+import fondoPiel from '../Images/FondoPiel.jpg';
 
 export const Navbar = ({ onImagenCambiada }) => {
 
