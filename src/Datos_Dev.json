@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "key": "multi",
+        "img": "images/imagesDev/Multityr.png",
+        "urlPage": "https://multiserviciostyr.netlify.app/",
+        "urlGit": "https://github.com/lorenzoJimenez301/MultiserviciosTyR.git",
+        "modal": {
+            "desc": "Main page of the cleaning division, in the company MultiserviciosTYR.",
+            "title": "Web Page MultiserviciosTYR",
+            "tecno1": "images/images_tecno/HTML LOGO.png",
+            "tecno2": "images/images_tecno/CSS LOGO.png",
+            "tecno3": "images/images_tecno/BOOTSTRAP LOGO.png",
+            "tecno4": "images/images_tecno/REACT LOGO.png"
+        }
+    },
+    {
+        "id": 2,
+        "key": "calcu",
+        "img": "images/imagesDev/Calcu.png",
+        "urlPage": "https://calculator-react-lorenzo.netlify.app",
+        "urlGit": "https://github.com/lorenzoJimenez301/Calculadora-React.git",
+        "modal": {
+            "desc": "A calculator made with React is an interactive web application that uses the React JavaScript library to create an intuitive and functional user interface for performing basic mathematical operations.",
+            "title": "React Calculator",
+            "tecno1": "images/images_tecno/HTML LOGO.png",
+            "tecno2": "images/images_tecno/CSS LOGO.png",
+            "tecno3": "images/images_tecno/NODE LOGO.png",
+            "tecno4": "images/images_tecno/REACT LOGO.png"
+        }
+    },
+    {
+        "id": 3,
+        "key": "cont",
+        "img": "images/imagesDev/Contador.png",
+        "urlPage": "https://contador-clicks-lorenzo.netlify.app/",
+        "urlGit": "https://github.com/lorenzoJimenez301/Contador-Clicks.git",
+        "modal": {
+            "desc": "A counter made with React is a UI component that uses the React JavaScript library to create a web application that displays a number and allows you to increase or decrease it with increment and decrement buttons.",
+            "title": "React Counter",
+            "tecno1": "images/images_tecno/HTML LOGO.png",
+            "tecno2": "images/images_tecno/CSS LOGO.png",
+            "tecno3": "images/images_tecno/NODE LOGO.png",
+            "tecno4": "images/images_tecno/REACT LOGO.png"
+        }
+    },
+    {
+        "id": 4,
+        "key": "todo",
+        "img": "images/imagesDev/TODO.png",
+        "urlPage": "https://gestor-tareas-lorenzo.netlify.app/",
+        "urlGit": "https://github.com/lorenzoJimenez301/Gestor-Tareas.git",
+        "modal": {
+            "desc": "Crea una aplicación web con React que permite agregar, eliminar y marcar tareas como completadas, usando estados locales y React hooks para la gestión y actualización de tareas. La interfaz es sencilla y responsiva.",
+            "title": "'Things To Do'",
+            "tecno1": "images/images_tecno/HTML LOGO.png",
+            "tecno2": "images/images_tecno/CSS LOGO.png",
+            "tecno3": "images/images_tecno/NODE LOGO.png",
+            "tecno4": "images/images_tecno/REACT LOGO.png"
+        }
+    },
+    {
+        "id": 5,
+        "key": "fakeStore",
+        "img": "images/imagesDev/fakeStore.png",
+        "urlPage": "https://fake-store-api-lorenzo-jimenez.netlify.app/",
+        "urlGit": "https://github.com/lorenzoJimenez301/Fake-Store-Api.git",
+        "modal": {
+            "desc": "",
+            "title": "Fake-Store-API",
+            "tecno1": "images/images_tecno/HTML LOGO.png",
+            "tecno2": "images/images_tecno/CSS LOGO.png",
+            "tecno3": "images/images_tecno/apiLogo.png",
+            "tecno4": "images/images_tecno/REACT LOGO.png"
+        }
+    },
+    {
+        "id": 6,
+        "key": "fakeBlog",
+        "img": "images/imagesDev/fakeBlog.png",
+        "urlPage": "https://github.com/lorenzoJimenez301/Personal-Blog-API",
+        "urlGit": "https://github.com/lorenzoJimenez301/Personal-Blog-API",
+        "modal": {
+            "desc": "",
+            "title": "Fake-Blog-API",
+            "tecno1": "images/images_tecno/NODE LOGO.png",
+            "tecno2": "images/images_tecno/CSS LOGO.png",
+            "tecno3": "images/images_tecno/apiLogo.png",
+            "tecno4": "images/images_tecno/HTML LOGO.png"
+        }
+    }
+]

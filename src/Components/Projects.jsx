@@ -6,34 +6,13 @@ import '../Styles/Projects.css';
 import { RxCross1 } from "react-icons/rx";
 import { BsGithub, BsGlobe2, BsInfoCircle } from "react-icons/bs";
 import { useMediaQuery } from 'react-responsive';
-import apiLogo from '../Images/LogoTecno/apiLogo.png'
-import fakeStore from '../Images/Projects/fakeStore.png';
-import Node from '../Images/LogoTecno/NODE LOGO.png';
-import Html from '../Images/LogoTecno/HTML LOGO.png';
-import Css from '../Images/LogoTecno/CSS LOGO.png';
-import Php from '../Images/LogoTecno/PHP LOGO.png';
-import react from '../Images/LogoTecno/REACT LOGO.png';
-import Bootstrap from '../Images/LogoTecno/BOOTSTRAP LOGO.png';
-import multityr from '../Images/Projects/Multityr.png';
-import imgCalcu from '../Images/Projects/Calcu.png';
-import imgContador from '../Images/Projects/Contador.png';
-import imgToDo from '../Images/Projects/TODO.png';
-import imgPhp from '../Images/Projects/php.png';
-import fakeBlog from '../Images/Projects/fakeBlog.png';
-import gd1 from '../Images/GraphicProjects/398594924_213675705086097_4875625992226101580_n.jpg';
-import gd2 from '../Images/GraphicProjects/Antonios_s Solutions fondo blanco.png';
-import gd3 from '../Images/GraphicProjects/Cap White.png';
-import gd4 from '../Images/GraphicProjects/Men Hoodies Mockup, Front And Back View(1).png';
-import gd5 from '../Images/GraphicProjects/Screenshot 2024-03-21 111638.png';
-import gd6 from '../Images/GraphicProjects/Skullrai.png';
-import gd7 from '../Images/GraphicProjects/Soda Cano Logotipo Color Reforzed.png';
-import gd8 from '../Images/GraphicProjects/Isotipo Cai-man.png';
-import gd9 from '../Images/GraphicProjects/Isotipo Cai-man 2.png';
-import gd10 from '../Images/GraphicProjects/Isotipo Cai-man 3.png';
-import gd11 from '../Images/GraphicProjects/Chocomenta.png';
 import { ColorRing } from 'react-loader-spinner';
 import { FaBehanceSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import Data from '../Datos_Dev.json';
+import graphicData from '../Datos_Gra.json';
+
+
 
 const ProjectItem = ({ img, id, urlGit, urlPage }) => {
     const [hovered, setHovered] = useState(false);
@@ -74,7 +53,7 @@ const ProjectItem = ({ img, id, urlGit, urlPage }) => {
                         colors={['#000']}
                     />
                 ) : (
-                    <img className={`projectImg`} src={img} alt="project" />
+                    <img className={`projectImg`} src={`${img}`} alt="project" />
                 )}
             </div>
         </div>
@@ -115,14 +94,21 @@ const ModalProject = ({ id, title, img, tecno1, tecno2, tecno3, tecno4 }) => {
 }
 
 const ProjectsWebDevelopment = () => {
+
+
     return (
         <>
-            <ProjectItem urlPage={'https://multiserviciostyr.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/MultiserviciosTyR.git'} id={'multi'} img={multityr} />
-            <ProjectItem urlPage={'https://calculator-react-lorenzo.netlify.app'} urlGit={'https://github.com/lorenzoJimenez301/Calculadora-React.git'} id={'calcu'} img={imgCalcu} />
-            <ProjectItem urlPage={'https://contador-clicks-lorenzo.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Contador-Clicks.git'} id={'cont'} img={imgContador} />
-            <ProjectItem urlPage={'https://gestor-tareas-lorenzo.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Gestor-Tareas.git'} id={'todo'} img={imgToDo} />
-            <ProjectItem urlPage={'https://fake-store-api-lorenzo-jimenez.netlify.app/'} urlGit={'https://github.com/lorenzoJimenez301/Fake-Store-Api.git'} id={'fakeStore'} img={fakeStore} />
-            <ProjectItem urlPage={'https://github.com/lorenzoJimenez301/Personal-Blog-API'} urlGit={'https://github.com/lorenzoJimenez301/Personal-Blog-API'} id={'fakeBlog'} img={fakeBlog} />
+            {
+                Data.map(data =>
+                    <ProjectItem
+                        key={data.id}
+                        id={data.key}
+                        img={data.img}
+                        urlPage={data.urlPage}
+                        urlGit={data.urlGit}
+                    />
+                )
+            }
         </>
     );
 }
@@ -159,18 +145,9 @@ const GraphicDesignItem = ({ url }) => {
 const ProjectsGrapich = () => {
     return (
         <div className='grapichContainer'>
-            <GraphicDesignItem url={gd1} />
-            <GraphicDesignItem url={gd2} />
-            <GraphicDesignItem url={gd5} />
-            <GraphicDesignItem url={gd3} />
-            <GraphicDesignItem url={gd4} />
-            <GraphicDesignItem url={gd6} />
-            <GraphicDesignItem url={gd7} />
-            <GraphicDesignItem url={gd8} />
-            <GraphicDesignItem url={gd9} />
-            <GraphicDesignItem url={gd10} />
-            <GraphicDesignItem url={gd11} />
-
+            {graphicData.map( datos =>
+                <GraphicDesignItem url={datos.url} />
+            )}
         </div>
     );
 }
@@ -194,25 +171,33 @@ export const Projects = () => {
             </div>
             <div className='projectsContainerGrid'>
                 {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
-                <ModalProject id={'multi'} img={multityr} desc={'Main page of the cleaning division, in the company MultiserviciosTYR.'} title={'Web Page MultiserviciosTYR'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Bootstrap} />
-                <ModalProject id={'calcu'} img={imgCalcu} desc={'A calculator made with React is an interactive web application that uses the React JavaScript library to create an intuitive and functional user interface for performing basic mathematical operations.'} title={'React Calculator'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
-                <ModalProject id={'cont'} img={imgContador} desc={'A counter made with React is a UI component that uses the React JavaScript library to create a web application that displays a number and allows you to increase or decrease it with increment and decrement buttons.'} title={'React Counter'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
-                <ModalProject id={'todo'} img={imgToDo} desc={'A task manager made with React is a web application that uses the React JavaScript library to help users dynamically organize, create, delete, and edit tasks.'} title={'React "Thing to do"'} tecno1={Html} tecno2={Css} tecno3={react} tecno4={Node} />
-                <ModalProject id={'php'} img={imgPhp} desc={'A CRUD (Create, Read, Update, Delete) in PHP is a set of basic operations to manage data in a database.'} title={'PHP CRUD'} tecno1={Html} tecno2={Css} tecno3={Bootstrap} tecno4={Php} />
-                <ModalProject id={'fakeStore'} img={fakeStore} desc={''} title={'Fake-Store-API'} tecno1={Html} tecno2={apiLogo} tecno3={Bootstrap} tecno4={react} />
-                <ModalProject id={'fakeBlog'} img={fakeBlog} desc={''} title={'Fake-Blog-API'} tecno1={Node} tecno2={Html} tecno3={Css} tecno4={apiLogo} />
+                {
+                    Data.map(data =>
+                        <ModalProject
+                            key={data.id}
+                            id={data.key}
+                            img={data.img}
+                            desc={data.modal.desc}
+                            title={data.modal.title}
+                            tecno1={data.modal.tecno1}
+                            tecno2={data.modal.tecno2}
+                            tecno3={data.modal.tecno3}
+                            tecno4={data.modal.tecno4}
+                        />
+                    )
+                }
             </div>
-            <div className='w-100 d-flex justify-content-center d-none d-lg-flex' style={{padding: '5vw'}}>
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className={`btnBehance text-decoration-none m-0 justify-content-center align-items-center ${isGraphicDesign ? 'd-flex' : 'd-none'}`}
-              href='https://www.behance.net/lorenzojimenez4'
-              target='_blank'
-            >
-              More
-              <FaBehanceSquare style={{margin: '0 0 0 .5vw', padding: '0'}} />
-            </motion.a>
+            <div className='w-100 d-flex justify-content-center d-none d-lg-flex' style={{ padding: '5vw' }}>
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={`btnBehance text-decoration-none m-0 justify-content-center align-items-center ${isGraphicDesign ? 'd-flex' : 'd-none'}`}
+                    href='https://www.behance.net/lorenzojimenez4'
+                    target='_blank'
+                >
+                    More
+                    <FaBehanceSquare style={{ margin: '0 0 0 .5vw', padding: '0' }} />
+                </motion.a>
             </div>
         </section>
     );
