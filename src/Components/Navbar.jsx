@@ -80,7 +80,7 @@ export const Navbar = ({ onImagenCambiada }) => {
                 {activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' />}
             </div>
             <div className={`${!activo ? 'collapsar' : ''} navBar2`}>
-                <ul className={`${!activo ? 'collapsar' : ''} m-0 navList`}>
+                <ul className={`m-0 navList`}>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/'} >Menu</Link></li>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/AboutMe'} >About Me</Link></li>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/Certifications'} >Certifications</Link></li>
