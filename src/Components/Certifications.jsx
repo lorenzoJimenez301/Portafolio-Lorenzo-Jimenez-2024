@@ -7,7 +7,7 @@ import cert2 from '../Images/Certifications/Cert2.png';
 import cert3 from '../Images/Certifications/Cert3.png';
 import cert4 from '../Images/Certifications/Cert4.png';
 import cert5 from '../Images/Certifications/Cert5.png';
-import cert6 from '../Images/Certifications/Cert6.png';
+import cert6 from '../Images/Certifications/Cert6.jpg';
 import cert7 from '../Images/Certifications/Cert7.png';
 import 'swiper/css';
 import 'swiper/css/effect-fade';

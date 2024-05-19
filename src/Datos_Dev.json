@@ -17,7 +17,7 @@
     {
         "id": 2,
         "key": "calcu",
-        "img": "images/imagesDev/Calcu.png",
+        "img": "images/imagesDev/Calcu.jpg",
         "urlPage": "https://calculator-react-lorenzo.netlify.app",
         "urlGit": "https://github.com/lorenzoJimenez301/Calculadora-React.git",
         "modal": {
@@ -47,7 +47,7 @@
     {
         "id": 4,
         "key": "todo",
-        "img": "images/imagesDev/TODO.png",
+        "img": "images/imagesDev/TODO.jpg",
         "urlPage": "https://gestor-tareas-lorenzo.netlify.app/",
         "urlGit": "https://github.com/lorenzoJimenez301/Gestor-Tareas.git",
         "modal": {
