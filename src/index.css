@@ -19,6 +19,7 @@
 * {
     user-select: none;
 }
+
 html,
 body {
     overflow-x: hidden;
@@ -34,7 +35,12 @@ body {
 
 }
 
-.modal-open{
+.modal-open {
     padding: 0 !important;
     margin: 0 !important;
+}
+@media (max-width: 992px) {
+    h3 {
+        font-size: 6vw !important;
+    }
 }

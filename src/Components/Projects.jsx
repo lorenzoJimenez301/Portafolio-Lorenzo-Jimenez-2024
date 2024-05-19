@@ -163,7 +163,7 @@ export const Projects = () => {
         <section style={{ backgroundImage: `url(${backgroundImage})` }} className='projectsSection'>
             <div className='projectsTitleContainer'>
                 <h2 className='projectTitle p-0'>Projects</h2>
-                <h3 className='projectSubTitle p-0 m-0'>Personal & Professional</h3>
+                <h3 className={`projectSubTitle p-0 `}>Personal & Professional</h3>
                 <div className='projectsCate d-flex flex-row justify-content-start align-items-center'>
                     <button className={`btnProjects ${!isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(false)}>Web Development</button>
                     <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
