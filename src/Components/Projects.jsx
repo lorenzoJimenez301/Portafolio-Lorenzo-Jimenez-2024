@@ -11,6 +11,8 @@ import { FaBehanceSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Data from '../Datos_Dev.json';
 import graphicData from '../Datos_Gra.json';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 
 
 
@@ -145,7 +147,7 @@ const GraphicDesignItem = ({ url }) => {
 const ProjectsGrapich = () => {
     return (
         <div className='grapichContainer'>
-            {graphicData.map( datos =>
+            {graphicData.map(datos =>
                 <GraphicDesignItem url={datos.url} />
             )}
         </div>
@@ -155,10 +157,20 @@ const ProjectsGrapich = () => {
 export const Projects = () => {
 
     const [isGraphicDesign, setIsGraphicDesign] = useState(false);
+    const [disableTransitions, setDisableTransitions] = useState(false)
+
     const handleChange = (isGraphic) => {
+
         setIsGraphicDesign(isGraphic);
+
+        setTimeout(() => {
+            setDisableTransitions(false);
+        }, 500);
+
     }
+
     const { backgroundImage } = useContext(ThemeContext);
+
     return (
         <section style={{ backgroundImage: `url(${backgroundImage})` }} className='projectsSection'>
             <div className='projectsTitleContainer'>
@@ -169,24 +181,32 @@ export const Projects = () => {
                     <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
                 </div>
             </div>
-            <div className='projectsContainerGrid'>
-                {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
-                {
-                    Data.map(data =>
-                        <ModalProject
-                            key={data.id}
-                            id={data.key}
-                            img={data.img}
-                            desc={data.modal.desc}
-                            title={data.modal.title}
-                            tecno1={data.modal.tecno1}
-                            tecno2={data.modal.tecno2}
-                            tecno3={data.modal.tecno3}
-                            tecno4={data.modal.tecno4}
-                        />
-                    )
-                }
-            </div>
+            <TransitionGroup>
+                <CSSTransition
+                    key={isGraphicDesign ? 'graphic' : 'web'}
+                    classNames='fade'
+                    timeout={200}
+                >
+                    <div className='projectsContainerGrid'>
+                        {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
+                        {
+                            Data.map(data =>
+                                <ModalProject
+                                    key={data.id}
+                                    id={data.key}
+                                    img={data.img}
+                                    desc={data.modal.desc}
+                                    title={data.modal.title}
+                                    tecno1={data.modal.tecno1}
+                                    tecno2={data.modal.tecno2}
+                                    tecno3={data.modal.tecno3}
+                                    tecno4={data.modal.tecno4}
+                                />
+                            )
+                        }
+                    </div>
+                </CSSTransition>
+            </TransitionGroup>
             <div className='w-100 d-flex justify-content-center d-none d-lg-flex' style={{ padding: '5vw' }}>
                 <motion.a
                     whileHover={{ scale: 1.1 }}

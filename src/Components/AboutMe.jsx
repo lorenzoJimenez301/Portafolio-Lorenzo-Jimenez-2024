@@ -63,7 +63,7 @@ export const AboutMe = () => {
                         </div>
                     }
                     <div ref={transitionRef} className='skillsDetailsContainer'>
-                        <CSSTransition nodeRef={transitionRef} in={isGraphicDesign} timeout={200} classNames="my-node">
+                        <CSSTransition nodeRef={transitionRef} in={isGraphicDesign} timeout={500} classNames="my-node">
                             {isGraphicDesign ? <GraphicDesign /> : <WebDevelopment section={isFrontEnd} />}
                         </CSSTransition>
                     </div>

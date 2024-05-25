@@ -37,31 +37,31 @@ const MySlider = () => {
             className='carrusel m-0 p-0'
         >
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert1} />
+                <img alt='img' className='imgCarrusel' src={cert1} />
                 <h3 className='titleCerti'>Responsive Web Design</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert2} />
+                <img alt='img' className='imgCarrusel' src={cert2} />
                 <h3 className='titleCerti'>Front End Developer</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert3} />
+                <img alt='img' className='imgCarrusel' src={cert3} />
                 <h3 className='titleCerti'>Soft Skills</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert4} />
+                <img alt='img' className='imgCarrusel' src={cert4} />
                 <h3 className='titleCerti'>High school</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}`}} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert6} />
+                <img alt='img' className='imgCarrusel' src={cert6} />
                 <h3 className='titleCerti'>Web development technician</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert5} />
+                <img alt='img' className='imgCarrusel' src={cert5} />
                 <h3 className='titleCerti'>Fullstack Developer in "Fumigadora Coroin"</h3>
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : '27vw'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
-                <img loading='eager' alt='img' className='imgCarrusel' src={cert7} />
+                <img alt='img' className='imgCarrusel' src={cert7} />
                 <h3 className='titleCerti'>The complete development 2024 bootcamp</h3>
             </SwiperSlide>
         </Swiper>

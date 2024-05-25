@@ -24,6 +24,24 @@
     font-size: .8vw;
 }
 
+.my-node-enter {
+    opacity: 0;
+}
+
+.my-node-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.my-node-exit {
+    opacity: 0;
+}
+
+.my-node-exit-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
 @media (max-width: 992px) {
     .listSkills {
         width: 100%;

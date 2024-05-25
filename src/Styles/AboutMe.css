@@ -103,6 +103,7 @@
 .isSelected {
     color: var(--rojoPrincipal);
     font-weight: bold;
+
 }
 
 .my-node-enter {

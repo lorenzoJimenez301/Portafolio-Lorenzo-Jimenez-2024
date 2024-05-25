@@ -14,8 +14,8 @@ export const ProgressBar = ({ logo, color, porcent }) => {
 
     return (
         <li className='d-flex align-items-center justify-content-center'>
-            <img loading='eager' className='progressBarImg' src={logo} alt="icon" />
-            <div style={{height: '1vw'}} className="progress mx-auto" role="progressbar" aria-label="Basic example" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            <img className='progressBarImg' src={logo} alt="icon" />
+            <div style={{ height: '1vw' }} className="progress mx-auto" role="progressbar" aria-label="Basic example" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                 <div style={{ backgroundColor: color, width: `${porcent}%`, transition: 'width 2s ease', height: '1vw' }} className={`progress-bar`}></div>
             </div>
             <p className='p-0 pBar' style={{
@@ -77,13 +77,10 @@ export const BackEnd = () => {
 
 export const WebDevelopment = ({ section }) => {
     const transitionRef = useRef(null);
+
     return (
         <ul ref={transitionRef} className='listSkills p-0 m-0 d-flex flex-column justify-content-center align-items-center'>
-            <CSSTransition
-                in={section}
-                timeout={200}
-                nodeRef={transitionRef}
-            >
+            <CSSTransition nodeRef={transitionRef} in={section} timeout={500} classNames={"my-node"}>
                 {section ? <FrontEnd /> : <BackEnd />}
             </CSSTransition>
         </ul>

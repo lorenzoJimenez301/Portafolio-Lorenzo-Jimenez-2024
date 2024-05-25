@@ -12,12 +12,10 @@ import samuraiBlanco from '../Images/Samurai_White.png';
 import samuraiNegro from '../Images/Samurai_Black.png';
 import { useImage } from 'react-image';
 import { ThemeContext } from './ThemeContext';
-import fondoGris from '../Images/FondoGris.jpg'; // Nueva imagen de fondo gris
-import fondoPiel from '../Images/FondoPiel.jpg'; // Imagen de fondo de piel original
+import { TransitionGroup } from 'react-transition-group';
 
 export const Navbar = ({ onImagenCambiada }) => {
 
-    const { changeBackgroundImage } = useContext(ThemeContext);
     const { changeTheme } = useContext(ThemeContext);
 
     const { src: srcImagen1 } = useImage({
@@ -34,6 +32,7 @@ export const Navbar = ({ onImagenCambiada }) => {
     const root = document.documentElement;
     const grisPrincipal = '#1D1D1D';
     const pielPrincipal = '#F6DEBF';
+
     const toggleSwitch = () => {
         setIsOn(!isOn);
 
@@ -46,8 +45,7 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--negroOpa', '#ffffffde');
             root.style.setProperty('--blancoLink', '#000');
             root.style.setProperty('--grisPrincipal', pielPrincipal);
-            onImagenCambiada(srcImagen1);
-            changeBackgroundImage(fondoGris); // Cambio de fondo a gris
+            onImagenCambiada(srcImagen1);// Cambio de fondo a gris
             changeTheme('light');
         } else {
             setFoto(Logo)
@@ -57,15 +55,14 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--negroOpa', '#000000de');
             root.style.setProperty('--blancoLink', '#fff');
             root.style.setProperty('--grisPrincipal', grisPrincipal);
-            onImagenCambiada(srcImagen2);
-            changeBackgroundImage(fondoPiel); // Volver al fondo de piel original
+            onImagenCambiada(srcImagen2); // Volver al fondo de piel original
             changeTheme('dark');
         }
     }
 
     const spring = {
         type: 'spring',
-        stiffness: 700,
+        stiffness: 500,
         damping: 30
     };
 

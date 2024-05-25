@@ -5,9 +5,9 @@ import { useImage } from 'react-image';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import '../Styles/Index.css';
-import { ThemeContext } from './ThemeContext';
-import { useContext } from 'react';
 import Typewriter from 'typewriter-effect';
+import { CSSTransition } from 'react-transition-group';
+import { useState } from 'react';
 
 export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen }) => {
   const { src: srcImagenMostrada } = useImage({
@@ -15,11 +15,12 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
   });
 
   const isMobile = useMediaQuery({ maxWidth: 992 });
-  const { backgroundImage } = useContext(ThemeContext);
   const words = ['Developer', 'Graphic Designer'];
 
+  const [transitionRef, setTransitionRef] = useState(null);
+
   return (
-    <section style={{ backgroundImage: `url(${backgroundImage})` }} className="indexContainer d-flex align-items-end justify-content-evenly">
+    <section className="indexContainer d-flex align-items-end justify-content-evenly">
       <div className="heroContainer">
         <div className="titleContainer">
           <h1 className="title d-flex flex-column d-lg-inline">
@@ -29,7 +30,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
             </Link>
           </h1>
           <h2 className="subTitle m-0 p-0 d-flex gap-2 gap-lg-3 text-center">
-            <span style={{color:'var(--grisPrincipal)'}}>Programmer &{' '}</span>
+            <span style={{ color: 'var(--grisPrincipal)' }}>Programmer &{' '}</span>
             <Typewriter
               options={{
                 strings: words,
@@ -58,7 +59,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
           </Link>
         </div>
         <div className="samuraiContainer d-flex align-items-end justify-content-center justify-content-lg-end">
-          <img className="samurai" src={srcImagenMostrada} alt="samurai" />
+            <img className="samurai" src={srcImagenMostrada} alt="samurai" />
         </div>
       </div>
     </section>

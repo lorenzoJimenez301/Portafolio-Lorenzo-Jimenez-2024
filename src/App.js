@@ -24,8 +24,11 @@ function App() {
     img2.src = samuraiNegro;
   })
   const [imagenURL1, setImagenURL1] = useState(samuraiNegro);
+  
   const [imagenURL2, setImagenURL2] = useState(samuraiBlanco);
+
   const [mostrarPrimeraImagen, setMostrarPrimeraImagen] = useState(true);
+
   const handleImagenCambiada = (nuevaImagen) => {
     if (mostrarPrimeraImagen) {
       setImagenURL1(nuevaImagen);
@@ -34,6 +37,7 @@ function App() {
     }
     setMostrarPrimeraImagen(!mostrarPrimeraImagen);
   };
+
   return (
     <div className='App'>
       <ThemeProvider>
