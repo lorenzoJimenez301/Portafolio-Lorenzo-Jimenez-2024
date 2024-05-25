@@ -9,7 +9,7 @@ import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
 import Typewriter from 'typewriter-effect';
 
-export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen, back }) => {
+export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen }) => {
   const { src: srcImagenMostrada } = useImage({
     srcList: mostrarPrimeraImagen ? imagenURL1 : imagenURL2,
   });
@@ -58,7 +58,7 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen,
           </Link>
         </div>
         <div className="samuraiContainer d-flex align-items-end justify-content-center justify-content-lg-end">
-          <img loading='eager' className="samurai" src={srcImagenMostrada} alt="samurai" />
+          <img className="samurai" src={srcImagenMostrada} alt="samurai" />
         </div>
       </div>
     </section>
