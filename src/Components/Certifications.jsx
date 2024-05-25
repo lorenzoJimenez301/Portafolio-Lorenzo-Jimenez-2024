@@ -67,7 +67,6 @@ const MySlider = () => {
         </Swiper>
     );
 };
-
 export const Certifications = () => {
     const { backgroundImage } = useContext(ThemeContext);
     return (
