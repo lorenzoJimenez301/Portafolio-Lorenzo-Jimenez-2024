@@ -12,7 +12,6 @@ import samuraiBlanco from '../Images/Samurai_White.png';
 import samuraiNegro from '../Images/Samurai_Black.png';
 import { useImage } from 'react-image';
 import { ThemeContext } from './ThemeContext';
-import { TransitionGroup } from 'react-transition-group';
 
 export const Navbar = ({ onImagenCambiada }) => {
 

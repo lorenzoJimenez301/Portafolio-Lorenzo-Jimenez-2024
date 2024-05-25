@@ -157,15 +157,10 @@ const ProjectsGrapich = () => {
 export const Projects = () => {
 
     const [isGraphicDesign, setIsGraphicDesign] = useState(false);
-    const [disableTransitions, setDisableTransitions] = useState(false)
 
     const handleChange = (isGraphic) => {
 
         setIsGraphicDesign(isGraphic);
-
-        setTimeout(() => {
-            setDisableTransitions(false);
-        }, 500);
 
     }
 

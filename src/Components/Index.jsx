@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import '../Styles/Index.css';
 import Typewriter from 'typewriter-effect';
-import { CSSTransition } from 'react-transition-group';
-import { useState } from 'react';
 
 export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen }) => {
   const { src: srcImagenMostrada } = useImage({
@@ -16,8 +14,6 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
 
   const isMobile = useMediaQuery({ maxWidth: 992 });
   const words = ['Developer', 'Graphic Designer'];
-
-  const [transitionRef, setTransitionRef] = useState(null);
 
   return (
     <section className="indexContainer d-flex align-items-end justify-content-evenly">
