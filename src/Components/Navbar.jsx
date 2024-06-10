@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import Logo from '../Images/1.png';
-import LogoBlanco from '../Images/2.png';
+import Logo from '../Images/Logo_Dark.svg';
+import LogoBlanco from '../Images/Logo_White.svg';
 import '../Styles/Navbar.css';
 import { motion } from 'framer-motion';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { FaMoon } from 'react-icons/fa';
 import { MdSunny } from 'react-icons/md';
 import { useMediaQuery } from 'react-responsive';
@@ -43,7 +43,7 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--negro', '#ffffff');
             root.style.setProperty('--negroOpa', '#ffffffde');
             root.style.setProperty('--blancoLink', '#000');
-            root.style.setProperty('--grisPrincipal', pielPrincipal);
+            root.style.setProperty('--grisPrincipal', '#fff');
             onImagenCambiada(srcImagen1);// Cambio de fondo a gris
             changeTheme('light');
         } else {
@@ -53,7 +53,7 @@ export const Navbar = ({ onImagenCambiada }) => {
             root.style.setProperty('--negro', '#000000');
             root.style.setProperty('--negroOpa', '#000000de');
             root.style.setProperty('--blancoLink', '#fff');
-            root.style.setProperty('--grisPrincipal', grisPrincipal);
+            root.style.setProperty('--grisPrincipal', '');
             onImagenCambiada(srcImagen2); // Volver al fondo de piel original
             changeTheme('dark');
         }
@@ -69,7 +69,17 @@ export const Navbar = ({ onImagenCambiada }) => {
 
     const active = () => {
         setActivo(!activo);
+
     }
+
+    useEffect(()=>{
+        if(activo){
+            document.body.style.overflowY = 'auto';
+        }else{
+            document.body.style.overflowY = 'hidden';
+
+        }
+    },[activo]);
 
     return (
         <nav style={{ position: 'absolute' }} className={`${!activo ? 'collapsar' : ''} navBarPrincipal m-0 p-0`}>
@@ -78,7 +88,7 @@ export const Navbar = ({ onImagenCambiada }) => {
                 {activo ? <RxHamburgerMenu onClick={active} id='hambur' className='d-lg-none' /> : <RxCross1 onClick={active} id='hambur' className='d-lg-none' />}
             </div>
             <div className={`${!activo ? 'collapsar' : ''} navBar2`}>
-                <ul className={`m-0 navList`}>
+                <ul className={`navList`}>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/'} >Menu</Link></li>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/AboutMe'} >About Me</Link></li>
                     <li className='navItemContainer'><Link className='text-decoration-none navItem' data-ison={isOn} onClick={isMobile ? active : null} to={'/Certifications'} >Certifications</Link></li>

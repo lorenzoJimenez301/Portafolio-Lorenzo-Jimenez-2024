@@ -1,6 +1,5 @@
 .superSkillsContainer {
     padding: 8vw 0 6vw 0;
-    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -49,8 +48,8 @@
 }
 
 .skillsContainer {
+    min-height: 40vw;
     color: var(--negro);
-    height: 35vw;
     width: 37vw;
     min-width: 37vw;
     font-family: var(--mont);

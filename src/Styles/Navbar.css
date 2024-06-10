@@ -135,14 +135,15 @@
 
     .navList {
         /* clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0); */
-        height: 210vw;
+        height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
-        gap: 0px;
+        justify-content: start;
+        gap: 15vw;
         padding: 0;
+        margin: 20vw 0 0 0;
         /* transition: height .5s ease, clip-path .7s ease; */
     }
 

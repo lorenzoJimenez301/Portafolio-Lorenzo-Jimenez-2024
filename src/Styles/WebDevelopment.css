@@ -15,8 +15,12 @@
     color: var(--negro);
 }
 
-.progressBarImg {
+.iconTecno {
     height: 3vw;
+    padding: 0 .7vw 0 0;
+}
+
+.tail{
     padding: 0 .7vw 0 0;
 }
 
@@ -42,6 +46,10 @@
     transition: opacity 500ms;
 }
 
+.tail{
+    height: 2.3vw;
+}
+
 @media (max-width: 992px) {
     .listSkills {
         width: 100%;
@@ -53,8 +61,12 @@
         gap: 2vw;
     }
 
-    .progressBarImg {
-        height: 12vw;
+    .iconTecno {
+        height: 10vw;
+    }
+
+    .tail{
+        height: 7vw;
     }
 
     .progress {

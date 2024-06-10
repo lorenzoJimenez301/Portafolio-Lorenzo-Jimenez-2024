@@ -10,10 +10,6 @@
     width: 50vw;
 }
 
-.certi2{
-    padding: 5vw 0 0 0;
-}
-
 .certiTitle {
     color: var(--negro);
     font-family: var(--mont);
@@ -57,7 +53,6 @@
     cursor: pointer;
     font-size: 2.9vw;
     color: var(--negro);
-    margin: 0vw 3vw 5.5vw;
 }
 
 .btnMore {
@@ -84,7 +79,24 @@
     height: 15vw;
 }
 
+.custom-prev-button{
+    margin: 0 2vw 0 0;
+}
+
+.custom-next-button{
+    margin: 0 0 0 2vw;
+}
+
 @media (max-width: 992px) {
+
+    .custom-prev-button{
+        margin: 0 0vw 0 0;
+    }
+    
+    .custom-next-button{
+        margin: 0 0 0 0vw;
+    }
+
     .certificationsContainer {
         height: 100%;
         padding: 40vw 0;
@@ -109,7 +121,7 @@
     }
 
     .certi2 {
-        padding: 10vw 4vw;
+        padding: 10vw 0;
         width: 100%;
     }
 
