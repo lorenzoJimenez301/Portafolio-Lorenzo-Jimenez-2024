@@ -18,14 +18,14 @@ export const Index = React.memo(({ imagenURL1, imagenURL2, mostrarPrimeraImagen 
   return (
     <section className="indexContainer d-flex align-items-end justify-content-evenly">
       <div className="heroContainer">
-        <div style={{letterSpacing: `${isMobile ? '-.4vw' : 'normal'}`}} className="titleContainer">
+        <div className="titleContainer">
           <h1 className="title d-flex flex-column d-lg-inline">
             Hi!, I'm{' '}
             <Link className="text-decoration-none Lorenzo" to={isMobile ? '/AboutMe' : ''} id="Lorenzo">
               Lorenzo
             </Link>
           </h1>
-          <h2 className="subTitle m-0 p-0 d-flex gap-2 gap-lg-3 text-center">
+          <h2 style={{letterSpacing: `${isMobile ? '-.4vw' : 'normal'}`}} className="subTitle m-0 p-0 d-flex gap-2 gap-lg-3 text-center">
             <span style={{ color: 'var(--grisPrincipal)' }}>Web Programmer &{' '}</span>
             <Typewriter
               options={{

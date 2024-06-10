@@ -6,7 +6,8 @@ import { Route, Routes } from 'react-router-dom';
 import 'reset.css';
 import samuraiNegro from './Images/Samurai_Black.png';
 import samuraiBlanco from './Images/Samurai_White.png';
-import { useState } from 'react';
+import ReactGA from 'react-ga';
+import { useState, useEffect } from 'react';
 import { AboutMe } from './Components/AboutMe';
 import { InterIndex } from './Components/InterIndex';
 import { Certifications } from './Components/Certifications';
@@ -15,6 +16,11 @@ import { Contact } from './Components/Contact';
 import { ThemeProvider } from './Components/ThemeContext';
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.initialize('G-Q88KHLBRWP');
+  }, []);
+
   document.addEventListener('DOMContentLoaded', () => {
     var img1 = new Image();
     img1.src = samuraiBlanco;
