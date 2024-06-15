@@ -8,10 +8,10 @@
         "modal": {
             "desc": "Main page of the cleaning division, in the company MultiserviciosTYR.",
             "title": "Web Page MultiserviciosTYR",
-            "tecno1": "images/images_tecno/HTML LOGO.png",
-            "tecno2": "images/images_tecno/CSS LOGO.png",
-            "tecno3": "images/images_tecno/BOOTSTRAP LOGO.png",
-            "tecno4": "images/images_tecno/REACT LOGO.png"
+            "tecno1": "/Images/LogoTecno/Html_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Css_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Bootstrap_Logo.svg",
+            "tecno4": "/Images/LogoTecno/React_Logo.svg"
         }
     },
     {
@@ -23,10 +23,10 @@
         "modal": {
             "desc": "A calculator made with React is an interactive web application that uses the React JavaScript library to create an intuitive and functional user interface for performing basic mathematical operations.",
             "title": "React Calculator",
-            "tecno1": "images/images_tecno/HTML LOGO.png",
-            "tecno2": "images/images_tecno/CSS LOGO.png",
-            "tecno3": "images/images_tecno/NODE LOGO.png",
-            "tecno4": "images/images_tecno/REACT LOGO.png"
+            "tecno1": "/Images/LogoTecno/Html_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Css_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Node_Logo.svg",
+            "tecno4": "/Images/LogoTecno/React_Logo.svg"
         }
     },
     {
@@ -38,10 +38,10 @@
         "modal": {
             "desc": "A counter made with React is a UI component that uses the React JavaScript library to create a web application that displays a number and allows you to increase or decrease it with increment and decrement buttons.",
             "title": "React Counter",
-            "tecno1": "images/images_tecno/HTML LOGO.png",
-            "tecno2": "images/images_tecno/CSS LOGO.png",
-            "tecno3": "images/images_tecno/NODE LOGO.png",
-            "tecno4": "images/images_tecno/REACT LOGO.png"
+            "tecno1": "/Images/LogoTecno/Html_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Css_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Node_Logo.svg",
+            "tecno4": "/Images/LogoTecno/React_Logo.svg"
         }
     },
     {
@@ -53,10 +53,10 @@
         "modal": {
             "desc": "Crea una aplicación web con React que permite agregar, eliminar y marcar tareas como completadas, usando estados locales y React hooks para la gestión y actualización de tareas. La interfaz es sencilla y responsiva.",
             "title": "'Things To Do'",
-            "tecno1": "images/images_tecno/HTML LOGO.png",
-            "tecno2": "images/images_tecno/CSS LOGO.png",
-            "tecno3": "images/images_tecno/NODE LOGO.png",
-            "tecno4": "images/images_tecno/REACT LOGO.png"
+            "tecno1": "/Images/LogoTecno/Html_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Css_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Node_Logo.svg",
+            "tecno4": "/Images/LogoTecno/React_Logo.svg"
         }
     },
     {
@@ -68,10 +68,10 @@
         "modal": {
             "desc": "",
             "title": "Fake-Store-API",
-            "tecno1": "images/images_tecno/HTML LOGO.png",
-            "tecno2": "images/images_tecno/CSS LOGO.png",
-            "tecno3": "images/images_tecno/apiLogo.png",
-            "tecno4": "images/images_tecno/REACT LOGO.png"
+            "tecno1": "/Images/LogoTecno/Html_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Css_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Api_Logo.svg",
+            "tecno4": "/Images/LogoTecno/React_Logo.svg"
         }
     },
     {
@@ -83,10 +83,25 @@
         "modal": {
             "desc": "",
             "title": "Fake-Blog-API",
-            "tecno1": "images/images_tecno/NODE LOGO.png",
-            "tecno2": "images/images_tecno/CSS LOGO.png",
-            "tecno3": "images/images_tecno/apiLogo.png",
-            "tecno4": "images/images_tecno/HTML LOGO.png"
+            "tecno1": "/Images/LogoTecno/Node_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Css_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Api_Logo.svg",
+            "tecno4": "/Images/LogoTecno/Html_Logo.svg"
+        }
+    },
+    {
+        "id": 7,
+        "key": "rudiArce",
+        "img": "images/imagesDev/rudiPage.jpg",
+        "urlPage": "https://rudiarceinternacional.com/",
+        "urlGit": "https://github.com/lorenzoJimenez301/RudiArceInter.git",
+        "modal": {
+            "desc": "",
+            "title": "Rudi Arce Internacional",
+            "tecno1": "/Images/LogoTecno/Node_Logo.svg",
+            "tecno2": "/Images/LogoTecno/Next.js_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Tailwind_CSS_Logo.svg",
+            "tecno4": "/Images/LogoTecno/Api_Logo.svg"
         }
     }
 ]

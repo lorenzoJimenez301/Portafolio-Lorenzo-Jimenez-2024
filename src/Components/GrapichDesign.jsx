@@ -22,10 +22,10 @@ export const GraphicDesign = () => {
 
   return (
     <ul style={{ marginTop: '7vw', padding: '0 0 0 2vw' }} className='listSkills listSkillsGraphic d-flex flex-column justify-content-center align-items-center'>
-      <ProgressBar clase={'iconTecno'} logo={psLogo} color={'#00acfe'} porcent={ancho1} />
-      <ProgressBar clase={'iconTecno'} logo={aILogo} color={'#fc9800'} porcent={ancho3} />
-      <ProgressBar clase={'iconTecno'} logo={fgLogo} color={'#f04d1b'} porcent={ancho2} />
-      <ProgressBar clase={'iconTecno'} logo={xdLogo} color={'#fc5ff3'} porcent={ancho4} />
+      <ProgressBar clase={'iconTecno'} logo={'/public/images/LogoTecno/Photoshop_Logo.svg'} color={'#00acfe'} porcent={ancho1} />
+      <ProgressBar clase={'iconTecno'} logo={'/public/images/LogoTecno/Ilustrator_Logo.svg'} color={'#fc9800'} porcent={ancho3} />
+      <ProgressBar clase={'iconTecno'} logo={'/public/images/LogoTecno/Figma.svg'} color={'#f04d1b'} porcent={ancho2} />
+      <ProgressBar clase={'iconTecno'} logo={'/public/images/LogoTecno/AdobeXD_Logo.svg'} color={'#fc5ff3'} porcent={ancho4} />
     </ul>
   );
 };

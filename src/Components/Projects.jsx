@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
@@ -148,7 +148,7 @@ const ProjectsGrapich = () => {
     return (
         <div className='grapichContainer'>
             {graphicData.map(datos =>
-                <GraphicDesignItem url={datos.url} />
+                <GraphicDesignItem key={datos.id} url={datos.url} />
             )}
         </div>
     );
@@ -166,6 +166,8 @@ export const Projects = () => {
 
     const { backgroundImage } = useContext(ThemeContext);
 
+    const nodeRef = useRef(null);
+
     return (
         <section style={{ backgroundImage: `url(${backgroundImage})` }} className='projectsSection'>
             <div className='projectsTitleContainer'>
@@ -178,6 +180,7 @@ export const Projects = () => {
             </div>
             <TransitionGroup>
                 <CSSTransition
+                    nodeRef={nodeRef}
                     key={isGraphicDesign ? 'graphic' : 'web'}
                     classNames='fade'
                     timeout={200}
