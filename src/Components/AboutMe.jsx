@@ -25,6 +25,7 @@ export const AboutMe = () => {
     const changeSection = (isFront) => {
         setIsFrontEnd(isFront);
     }
+    
     const { backgroundImage } = useContext(ThemeContext);
     return (
         <section style={{ backgroundImage: `url(${backgroundImage})` }} className='superSkillsContainer d-flex flex-column flex-lg-row align-items-center'>
@@ -36,7 +37,7 @@ export const AboutMe = () => {
                         I am a web developer and programmer with solid experience in graphic design. Passionate about <strong>creating intuitive and engaging digital solutions that fuse functionality with aesthetic design.</strong>
                     </p>
                     <p className='m-0 skills1P'>
-                        He also owns a small digital marketing service startup called <strong>Antonio's Solutions</strong>.
+                        He also owns a small digital marketing service startup called <strong>Antonio's Solutions</strong>. 
                     </p>
                     <motion.a
                         whileHover={{ scale: 1.1 }}
