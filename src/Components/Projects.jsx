@@ -11,7 +11,7 @@ import { FaBehanceSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Data from '../Datos_Dev.json';
 import graphicData from '../Datos_Gra.json';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 
 
