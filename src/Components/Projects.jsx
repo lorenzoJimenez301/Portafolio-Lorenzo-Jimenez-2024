@@ -71,17 +71,17 @@ const ModalProject = ({ id, title, img, tecno1, tecno2, tecno3, tecno4 }) => {
             <div style={{ minWidth: '40vw' }} className="modal-dialog modal-dialog-centered">
                 <div style={{ minWidth: '40vw' }} className="modal-content rounded-0">
                     <div style={{ padding: '1.5vw' }} className="modal-header">
-                        <h2 className='p-0 m-0' style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '4vw' : '2.3vw'}` }} >{title}</h2>
-                        <RxCross1 style={{ color: '#000', fontSize: `${isMobile ? '6.5vw' : '2vw'}` }} type="button" className="btnclose" data-bs-dismiss="modal" aria-label="Close" />
+                        <h2 className='p-0 m-0' style={{ fontFamily: 'var(--mont)', fontWeight: 'bold', fontSize: `${isMobile ? '2.8vw' : '2.3vw'}` }} >{title}</h2>
+                        <RxCross1 style={{ color: '#000', fontSize: `${isMobile ? '4vw' : '2vw'}` }} type="button" className="btnclose" data-bs-dismiss="modal" aria-label="Close" />
                     </div>
                     <div className="modal-body p-0">
                         <img loading='lazy' className='imgModalProjects' src={img} alt="imgModal" />
                     </div>
                     <div className="modal-footer d-flex justify-content-between">
-                        <div className='w-50 m-0'>
-                            <h3 style={{ fontFamily: 'var(--mont)', fontSize: `${isMobile ? '3.5vw' : '1.5vw'}` }} className='m-0 fw-bold text-center'>Tecnologies:</h3>
+                        <div className='m-0'>
+                            <h4 style={{ fontFamily: 'var(--mont)', fontSize: `${isMobile ? '3vw' : '1.5vw'}` }} className='m-0 fw-bold text-center'>Tecnologies:</h4>
                         </div>
-                        <div style={{ padding: '.5vw', gap: '1vw' }} className='w-50 m-0 d-flex justify-content-center'>
+                        <div style={{ padding: '.5vw', gap: '1vw' }} className='m-0 d-flex justify-content-center'>
                             <img loading='eager' className='imgTecnoModal' src={tecno1} alt="tecno" />
                             <img loading='eager' className='imgTecnoModal' src={tecno2} alt="tecno" />
                             <img loading='eager' className='imgTecnoModal' src={tecno3} alt="tecno" />
@@ -178,13 +178,8 @@ export const Projects = () => {
                     <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
                 </div>
             </div>
-            <TransitionGroup>
-                <CSSTransition
-                    nodeRef={nodeRef}
-                    key={isGraphicDesign ? 'graphic' : 'web'}
-                    classNames='fade'
-                    timeout={200}
-                >
+            <div ref={nodeRef}>
+                <CSSTransition nodeRef={nodeRef} in={isGraphicDesign} timeout={500} classNames={'my-node'}>
                     <div className='projectsContainerGrid'>
                         {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
                         {
@@ -204,7 +199,7 @@ export const Projects = () => {
                         }
                     </div>
                 </CSSTransition>
-            </TransitionGroup>
+            </div>
             <div className='w-100 d-flex justify-content-center d-none d-lg-flex' style={{ padding: '5vw' }}>
                 <motion.a
                     whileHover={{ scale: 1.1 }}

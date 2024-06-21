@@ -105,25 +105,8 @@
 
 }
 
-.my-node-enter {
-    opacity: 0;
-}
 
-.my-node-enter-active {
-    opacity: 1;
-    transition: opacity 500ms;
-}
-
-.my-node-exit {
-    opacity: 0;
-}
-
-.my-node-exit-active {
-    opacity: 1;
-    transition: opacity 500ms;
-}
-
-.btnAnto{
+.btnAnto {
     display: flex;
     width: max-content;
     height: 3.4vw;
@@ -139,9 +122,29 @@
     margin: 1vw 0 0 0;
     padding: 0vw .6vw;
 }
-.arrowRight{
+
+.arrowRight {
     font-size: .9vw;
     margin: 0 0 0 .5vw;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
 @media (max-width: 992px) {
