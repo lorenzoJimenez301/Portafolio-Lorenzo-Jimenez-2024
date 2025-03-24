@@ -1,15 +1,11 @@
 [
     {
-        "id": 0,
-        "url": "images/imagesGraphic/jessie.jpg"
-    },
-    {
         "id": 1,
-        "url": "images/imagesGraphic/Maria Becerra Post.jpg"
+        "url": "images/imagesGraphic/Arte AZ 2.jpg"
     },
     {
         "id": 2,
-        "url": "images/imagesGraphic/EP Consejo de Amor-Mejorado.jpg"
+        "url": "images/imagesGraphic/Arte AZ.jpg"
     },
     {
         "id": 3,
@@ -25,14 +21,19 @@
     },
     {
         "id": 6,
-        "url": "images/imagesGraphic/Mavic 3.jpg"
+        "url": "images/imagesGraphic/UI Moto.jpg"
     },
     {
         "id": 7,
-        "url": "images/imagesGraphic/Pantalla Index Merlin.jpg"
+        "url": "images/imagesGraphic/Nike UX.jpg"
     },
     {
         "id": 8,
-        "url": "images/imagesGraphic/Subi_Poster.jpg"
+        "url": "images/imagesGraphic/Mavic 3.jpg"
+    },
+    {
+        "id": 9,
+        "url": "images/imagesGraphic/Darkness.jpg"
     }
 ]
+
