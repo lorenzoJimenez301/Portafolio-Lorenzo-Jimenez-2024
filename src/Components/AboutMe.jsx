@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import '../Styles/AboutMe.css';
 import { WebDevelopment } from './WebDevelopment';
 import { GraphicDesign } from '../Components/GrapichDesign';
