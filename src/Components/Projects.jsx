@@ -10,7 +10,6 @@ import { ColorRing } from 'react-loader-spinner';
 import { FaBehanceSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Data from '../Datos_Dev.json';
-import graphicData from '../Datos_Gra.json';
 import { CSSTransition } from 'react-transition-group';
 
 
@@ -115,34 +114,34 @@ const ProjectsWebDevelopment = () => {
     );
 }
 
-const GraphicDesignItem = ({ url }) => {
-    const [isloading, setIsLoading] = useState(true);
+// const GraphicDesignItem = ({ url }) => {
+//     const [isloading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const imageLoader = new Image();
-        imageLoader.src = url;
-        imageLoader.onload = () => {
-            setIsLoading(false);
-        };
-    }, [url]);
-    return (
-        <div className={`${isloading ? 'graphicItems' : ''}`}>
-            {isloading ? (
-                <ColorRing
-                    visible={true}
-                    height="80"
-                    width="80"
-                    ariaLabel="blocks-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="blocks-wrapper w-100"
-                    colors={['#000']}
-                />
-            ) : (
-                <img className='gdImg' src={url} alt="project" />
-            )}
-        </div>
-    );
-}
+//     useEffect(() => {
+//         const imageLoader = new Image();
+//         imageLoader.src = url;
+//         imageLoader.onload = () => {
+//             setIsLoading(false);
+//         };
+//     }, [url]);
+//     return (
+//         <div className={`${isloading ? 'graphicItems' : ''}`}>
+//             {isloading ? (
+//                 <ColorRing
+//                     visible={true}
+//                     height="80"
+//                     width="80"
+//                     ariaLabel="blocks-loading"
+//                     wrapperStyle={{}}
+//                     wrapperClass="blocks-wrapper w-100"
+//                     colors={['#000']}
+//                 />
+//             ) : (
+//                 <img className='gdImg' src={url} alt="project" />
+//             )}
+//         </div>
+//     );
+// }
 
 
 

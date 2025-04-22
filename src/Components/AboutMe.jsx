@@ -12,7 +12,6 @@ import { useMediaQuery } from 'react-responsive';
 export const AboutMe = () => {
     const [isGraphicDesign, setIsGraphicDesign] = useState(false);
     const [isFrontEnd, setIsFrontEnd] = useState(true);
-    const transitionRef = useRef(null);
     const isMobile = useMediaQuery({ maxWidth: 992 });
 
 

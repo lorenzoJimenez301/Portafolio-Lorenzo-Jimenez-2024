@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Footer.css';
 import Logo from '../Images/Logo_White.svg';
-import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp, FaGithub, FaBehanceSquare } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaGithub, FaBehanceSquare } from 'react-icons/fa';
 
 export const Footer = () => {
   const year = new Date().getFullYear();
