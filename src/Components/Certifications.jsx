@@ -7,6 +7,7 @@ import cert2 from '../Images/Certifications/Covao.webp';
 import cert3 from '../Images/Certifications/Front End.webp';
 import cert4 from '../Images/Certifications/Fumuigadora.webp';
 import cert5 from '../Images/Certifications/UX.webp';
+import cert6 from '../Images/Certifications/Design.jpg';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -48,6 +49,9 @@ const MySlider = () => {
             </SwiperSlide>
             <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : 'auto'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
                 <img loading='lazy' alt='img' className='imgCarrusel' src={cert5} />
+            </SwiperSlide>
+            <SwiperSlide style={{ backgroundColor: 'var(--piel)', height: `${isMobile ? '60vw' : 'auto'}` }} className='swiper-slide text-center d-flex flex-column align-items-center'>
+                <img loading='lazy' alt='img' className='imgCarrusel' src={cert6} />
             </SwiperSlide>
         </Swiper>
     );

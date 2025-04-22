@@ -63,8 +63,8 @@ export const AboutMe = () => {
                             <button onClick={() => changeSection(false)} className={`btnFrontBack p-0 m-0 ${!isFrontEnd ? 'isSelected' : ''}`}>Back-End</button>
                         </div>
                     }
-                    <div ref={transitionRef} className='skillsDetailsContainer'>
-                        <CSSTransition nodeRef={transitionRef} in={isGraphicDesign} timeout={500} classNames='fade'>
+                    <div className='skillsDetailsContainer'>
+                        <CSSTransition>
                             {isGraphicDesign ? <GraphicDesign /> : <WebDevelopment section={isFrontEnd} />}
                         </CSSTransition>
                     </div>

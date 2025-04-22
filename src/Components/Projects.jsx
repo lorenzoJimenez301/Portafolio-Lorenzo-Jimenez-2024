@@ -144,25 +144,9 @@ const GraphicDesignItem = ({ url }) => {
     );
 }
 
-const ProjectsGrapich = () => {
-    return (
-        <div className='grapichContainer'>
-            {graphicData.map(datos =>
-                <GraphicDesignItem key={datos.id} url={datos.url} />
-            )}
-        </div>
-    );
-}
+
 
 export const Projects = () => {
-
-    const [isGraphicDesign, setIsGraphicDesign] = useState(false);
-
-    const handleChange = (isGraphic) => {
-
-        setIsGraphicDesign(isGraphic);
-
-    }
 
     const { backgroundImage } = useContext(ThemeContext);
 
@@ -174,14 +158,23 @@ export const Projects = () => {
                 <h2 className='projectTitle p-0'>Projects</h2>
                 <h3 className={`projectSubTitle p-0 `}>Personal & Professional</h3>
                 <div className='projectsCate d-flex flex-row justify-content-start align-items-center'>
-                    <button className={`btnProjects ${!isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(false)}>Web Development</button>
-                    <button className={`btnProjects ${isGraphicDesign ? 'selected' : ''}`} onClick={() => handleChange(true)}>Grapich Design</button>
+                    <button className={`btnProjects`}>Web Development</button>
+                    <motion.a
+                        whileHover={{ scale: 1.1, color: 'red'}}
+                        whileTap={{ scale: 0.9 }}
+                        className={`btnProjects text-decoration-none m-0 justify-content-center align-items-center`}
+                        href='https://www.behance.net/lorenzojimenez4'
+                        target='_blank'
+                    >
+                        Graphic Design
+                        <FaBehanceSquare style={{ margin: '0 0 0 .5vw', padding: '0' }} />
+                    </motion.a>
                 </div>
             </div>
             <div ref={nodeRef}>
-                <CSSTransition nodeRef={nodeRef} in={isGraphicDesign} timeout={500} classNames={'my-node'}>
+                <CSSTransition>
                     <div className='projectsContainerGrid'>
-                        {isGraphicDesign ? <ProjectsGrapich /> : <ProjectsWebDevelopment />}
+                        {<ProjectsWebDevelopment />}
                         {
                             Data.map(data =>
                                 <ModalProject
@@ -201,16 +194,6 @@ export const Projects = () => {
                 </CSSTransition>
             </div>
             <div className='w-100 d-flex justify-content-center d-none d-lg-flex' style={{ padding: '5vw' }}>
-                <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className={`btnBehance text-decoration-none m-0 justify-content-center align-items-center ${isGraphicDesign ? 'd-flex' : 'd-none'}`}
-                    href='https://www.behance.net/lorenzojimenez4'
-                    target='_blank'
-                >
-                    More
-                    <FaBehanceSquare style={{ margin: '0 0 0 .5vw', padding: '0' }} />
-                </motion.a>
             </div>
         </section>
     );

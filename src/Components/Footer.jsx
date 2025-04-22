@@ -14,12 +14,6 @@ export const Footer = () => {
         </div>
         <div className='d-flex flex-row align-items-center justify-content-center w-50 containerLinkFooter'>
           <hr className='hrFooter hr1' />
-          <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/lorenx_jimenez301/'>
-            <FaInstagram />
-          </a>
-          <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/profile.php?id=100091605591871'>
-            <FaFacebook />
-          </a>
           <a className='footerLink' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/lorenzojimenezabarca301/'>
             <FaLinkedin />
           </a>
