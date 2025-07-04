@@ -17,15 +17,15 @@
     {
         "id": 2,
         "key": "calcu",
-        "img": "images/imagesDev/Calcu.jpg",
-        "urlPage": "https://calculator-react-lorenzo.netlify.app",
-        "urlGit": "https://github.com/lorenzoJimenez301/Calculadora-React.git",
+        "img": "images/imagesDev/nike.png",
+        "urlPage": "https://nike-web-page-lorenzo-jimenez.netlify.app/",
+        "urlGit": "https://github.com/lorenzoJimenez301/nike-web-page",
         "modal": {
             "desc": "A calculator made with React is an interactive web application that uses the React JavaScript library to create an intuitive and functional user interface for performing basic mathematical operations.",
             "title": "React Calculator",
             "tecno1": "/Images/LogoTecno/Html_Logo.svg",
             "tecno2": "/Images/LogoTecno/Css_Logo.svg",
-            "tecno3": "/Images/LogoTecno/Node_Logo.svg",
+            "tecno3": "/Images/LogoTecno/Next.js_Logo.svg",
             "tecno4": "/Images/LogoTecno/React_Logo.svg"
         }
     },
